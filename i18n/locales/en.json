@@ -1,0 +1,197 @@
+{
+  "site": {
+    "name": "Company",
+    "tagline": "Precision manufacturing and industry solutions",
+    "footer": "© Placeholder — replace with your copy"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "developmentHistory": "History",
+    "industryApplication": "Applications",
+    "contactUs": "Contact"
+  },
+  "actions": {
+    "learnMore": "Learn more",
+    "switchLang": "Switch language",
+    "contact": "Contact us"
+  },
+  "footer": {
+    "rights": "© {year} {name}. All rights reserved.",
+    "contactHeading": "Contact",
+    "linksHeading": "Links"
+  },
+  "contact": {
+    "values": {
+      "phone": "Phone: 000-0000-0000",
+      "email": "Email: hello{'@'}example.com",
+      "address": "Address: replace with your address"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Company — Integrity, Quality, Innovation",
+      "description": "Machining and precision components. Partnerships with industry leaders."
+    },
+    "about": {
+      "title": "About — Company",
+      "description": "About page placeholder description."
+    },
+    "developmentHistory": {
+      "title": "Development History — Company",
+      "description": "Company milestones from founding to global partnerships, product expansion, and smart manufacturing."
+    },
+    "contactUs": {
+      "title": "Contact — Company",
+      "description": "How to reach us for business inquiries."
+    },
+    "industryApplication": {
+      "title": "Industry Applications — Company",
+      "description": "Applications and solutions across industries."
+    },
+    "productsShaft": {
+      "title": "Shafts — Company",
+      "description": "Precision shaft parts: power transmission, stepped shafts, and custom machining."
+    },
+    "productsFlange": {
+      "title": "Flanges — Company",
+      "description": "Standard and custom flanges for sealed connections and batch production."
+    },
+    "productsValve": {
+      "title": "Valve manifolds — Company",
+      "description": "Hydraulic valve blocks and integrated manifold assembly with precision passages."
+    },
+    "productsSheetMetal": {
+      "title": "Painted sheet metal — Company",
+      "description": "Fabrication, welding, and coating for sheet-metal parts in one workflow."
+    },
+    "productsAiAutomation": {
+      "title": "AI automation — Company",
+      "description": "Smart manufacturing and automation products aligned with precision machining."
+    }
+  },
+  "contactUs": {
+    "lead": "This page is coming soon. Use the email and phone in the site footer to reach us."
+  },
+  "industryApplication": {
+    "lead": "This page is coming soon."
+  },
+  "developmentHistory": {
+    "heroTitle": "Development History"
+  },
+  "home": {
+    "hero": {
+      "title": "Integrity builds quality. Innovation leads the future.",
+      "subtitle": "Machining and precision components with deep partnerships worldwide."
+    },
+    "factory": {
+      "title": "Factory video"
+    },
+    "products": {
+      "title": "Products",
+      "items": {
+        "shaft": {
+          "title": "Shafts",
+          "desc": "Precision shaft parts"
+        },
+        "flange": {
+          "title": "Flanges",
+          "desc": "Standard and custom flanges"
+        },
+        "valve": {
+          "title": "Valve blocks",
+          "desc": "Hydraulic valves and modules"
+        },
+        "painted": {
+          "title": "Paint & sheet metal",
+          "desc": "Painting and sheet metal"
+        },
+        "ai": {
+          "title": "AI automation",
+          "desc": "Automation and smart inspection"
+        }
+      }
+    }
+  },
+  "about": {
+    "title": "About us",
+    "body": "This page demonstrates routing and SEO. When adding pages, update locales, sitemap, and usePageSeo keys."
+  },
+  "productPage": {
+    "common": {
+      "heroBadge": "Custom metal work from drawings & samples",
+      "heroFootnote": "Minimum precision: 0.001 mm"
+    },
+    "shaft": {
+      "heroTitle1": "Mid-to-large non-standard shafts",
+      "heroTitle2": "Advanced custom machining",
+      "heroBullets": [
+        "· Internal & external threading",
+        "· Step turning / multi-diameter turning",
+        "· Keyway milling",
+        "· Additional processes on request"
+      ],
+      "bodyAria": "Shaft products overview",
+      "lead": "Add materials, typical processes, inspection, and case studies here.",
+      "facilityTurningTitle": "Turning area",
+      "facilityTurningDesc": "Advanced, well-equipped machinery.\nHigh precision. Full specification range.",
+      "facilityTurningImgAlt": "CNC turning machine in the turning area",
+      "facilityProcessingTitle": "Machining area",
+      "facilityProcessingDesc": "We maintain a comprehensive machine park including machining centers, CNC lathes, multiple milling machines, grinders, and wire EDM equipment.",
+      "facilityProcessingImgAlt": "Shop floor and machining equipment in the processing area",
+      "customCasesAriaLabel": "Custom case gallery for non-standard shaft products",
+      "customCasesTitle": "Custom case display: Non-standard shaft products",
+      "customCasesSubtitle": "With 30 years of industry experience, we have provided professional services to customers across many sectors.",
+      "customCaseImgAlt": "Custom case showcase for non-standard shaft products"
+    },
+    "flange": {
+      "heroTitle1": "Precision flange manufacturing",
+      "heroTitle2": "Sealed connections, end-to-end",
+      "heroBullets": [
+        "· Standard & custom flanges",
+        "· Face turning and hole patterns",
+        "· Seal grooves and edge breaks",
+        "· Optional heat treatment"
+      ],
+      "bodyAria": "Flange products overview",
+      "lead": "Add standards, sealing styles, grades, and industries served here."
+    },
+    "valve": {
+      "heroTitle1": "Hydraulic blocks & manifolds",
+      "heroTitle2": "Clean bores, tight control",
+      "heroBullets": [
+        "· Integrated circuit machining",
+        "· Cross-drills & deburring",
+        "· Test and flow checks",
+        "· Custom valve bodies to drawing"
+      ],
+      "bodyAria": "Valve products overview",
+      "lead": "Add design scope, typical circuits, testing, and applications here."
+    },
+    "sheetMetal": {
+      "heroTitle1": "Painted sheet-metal structures",
+      "heroTitle2": "Uniform finish, reliable delivery",
+      "heroBullets": [
+        "· Shear, bend, weld, and assemble",
+        "· Pretreatment and multi-coat painting",
+        "· Color and DFT consistency",
+        "· Protective packing & OQC"
+      ],
+      "bodyAria": "Sheet metal overview",
+      "lead": "Add thickness range, paint systems, color control, and packing here."
+    },
+    "aiAutomation": {
+      "heroTitle1": "Smart manufacturing & automation",
+      "heroTitle2": "Aligned with our machining capacity",
+      "heroBullets": [
+        "· Auto load/unload & fixturing",
+        "· In-line inspection & data capture",
+        "· Bundled with shafts & valve parts",
+        "· Assessments and continuous improvement"
+      ],
+      "bodyAria": "AI automation overview",
+      "lead": "Add cell layout, interfaces, delivery model, and examples here."
+    }
+  }
+}

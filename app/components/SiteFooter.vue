@@ -1,0 +1,83 @@
+<template>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <span class="footer-top-item">邮箱: sale@tjbeixiang.com</span>
+        <span class="footer-top-item">电话: +86-022-86993965</span>
+        <span class="footer-top-item">24小时响应</span>
+      </div>
+      <div class="footer-rule" role="presentation" />
+      <nav class="footer-bottom" aria-label="页脚链接">
+        <NuxtLink :to="localePath('/about')" class="footer-link">公司信息</NuxtLink>
+        <!-- <NuxtLink :to="localePath('/privacy')" class="footer-link">隐私声明</NuxtLink>
+        <NuxtLink :to="localePath('/cookies')" class="footer-link">Cookie声明</NuxtLink> -->
+      </nav>
+    </div>
+  </footer>
+</template>
+
+<script setup lang="ts">
+const localePath = useLocalePath();
+</script>
+
+<style scoped>
+.footer {
+  height: 180px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  background-color: #051739;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.footer-inner {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.75rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-top-item {
+  color: #fff;
+}
+
+.footer-rule {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 0.15em;
+  transition: opacity 0.15s ease;
+}
+
+.footer-link:hover {
+  opacity: 0.85;
+}
+</style>

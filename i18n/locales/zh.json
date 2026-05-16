@@ -1,0 +1,105 @@
+{
+  "site": {
+    "name": "天津市北翔机械有限公司",
+    "tagline": "专注精密制造与行业解决方案"
+  },
+  "nav": {
+    "home": "首页",
+    "products": "产品",
+    "developmentHistory": "发展历程",
+    "industryApplication": "行业应用",
+    "contactUs": "联系我们"
+  },
+  "seo": {
+    "home": {
+      "title": "首页 — 天津市北翔机械有限公司",
+      "description": "诚信铸就品质 创新引领未来"
+    },
+    "developmentHistory": {
+      "title": "发展历程 — 天津市北翔机械有限公司",
+      "description": "企业发展历程：从成立到全球化合作与智能化制造的里程碑。"
+    },
+    "contactUs": {
+      "title": "联系我们 — 天津市北翔机械有限公司",
+      "description": "联系方式与业务咨询。"
+    },
+    "industryApplication": {
+      "title": "行业应用 — 天津市北翔机械有限公司",
+      "description": "精密制造在各行业的应用场景与解决方案。"
+    },
+    "productsShaft": {
+      "title": "轴类产品 — 天津市北翔机械有限公司",
+      "description": "精密轴类零部件：传动轴、阶梯轴及定制化轴件加工与交付。"
+    },
+    "productsFlange": {
+      "title": "法兰类产品 — 天津市北翔机械有限公司",
+      "description": "标准及非标法兰：多规格密封连接件与批量机加工能力。"
+    },
+    "productsValve": {
+      "title": "阀组类产品 — 天津市北翔机械有限公司",
+      "description": "液压与流体阀组模块：集成化阀块与精密加工装配。"
+    },
+    "productsSheetMetal": {
+      "title": "喷漆钣金零件 — 天津市北翔机械有限公司",
+      "description": "钣金成型、焊接与表面喷涂：一站式金属外观件制造。"
+    },
+    "productsAiAutomation": {
+      "title": "AI自动化产品 — 天津市北翔机械有限公司",
+      "description": "智能制造与自动化产线相关产品与方案（页面内容可继续完善）。"
+    }
+  },
+  "productPage": {
+    "shaft": {
+      "title1": "轴类产品",
+      "title2": "精密制造 · 可靠传动",
+      "subtitle1": "涵盖多规格传动轴与阶梯轴零部件",
+      "subtitle2": "满足严苛工况与定制图纸要求",
+      "bodyAria": "轴类产品介绍",
+      "lead": "此处可继续补充轴类产品的材质范围、典型工艺、检测设备与行业案例等详细内容。"
+    },
+    "flange": {
+      "title1": "法兰类产品",
+      "title2": "密封连接 · 稳定交付",
+      "subtitle1": "标准与非标法兰加工",
+      "subtitle2": "批量化生产与品质一致性保障",
+      "bodyAria": "法兰类产品介绍",
+      "lead": "此处可继续补充法兰标准体系、密封形式、材料牌号与应用领域等详细内容。"
+    },
+    "valve": {
+      "title1": "阀组类产品",
+      "title2": "流体控制 · 模块集成",
+      "subtitle1": "液压阀块与阀组装配",
+      "subtitle2": "精密孔道加工与清洁度控制",
+      "bodyAria": "阀组类产品介绍",
+      "lead": "此处可继续补充阀组设计能力、典型油路布局、测试标准与客户场景等详细内容。"
+    },
+    "sheetMetal": {
+      "title1": "喷漆钣金零件",
+      "title2": "钣金成型 · 表面品质",
+      "subtitle1": "剪折刨焊与结构件制造",
+      "subtitle2": "喷涂前处理与外观一致性",
+      "bodyAria": "喷漆钣金零件介绍",
+      "lead": "此处可继续补充板材厚度范围、喷涂体系、色差控制与包装出货要求等详细内容。"
+    },
+    "aiAutomation": {
+      "title1": "AI自动化产品",
+      "title2": "智能产线 · 增效降本",
+      "subtitle1": "自动化与检测相关硬件配套",
+      "subtitle2": "与精密加工能力协同落地",
+      "bodyAria": "AI自动化产品介绍",
+      "lead": "此处可继续补充自动化单元构成、软件接口、交付形态与典型案例等详细内容。"
+    }
+  },
+  "contactUs": {
+    "heroTitle": "联系我们"
+  },
+  "industryApplication": {
+    "heroTitle": "行业应用"
+  },
+  "developmentHistory": {
+    "heroTitle": "发展历程"
+  },
+  "home": {
+    "heroTitle": "诚信铸就品质 创新引领未来"
+  }
+}
