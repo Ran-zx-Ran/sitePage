@@ -8,7 +8,7 @@
       </div>
       <div class="footer-rule" role="presentation" />
       <nav class="footer-bottom" aria-label="页脚链接">
-        <NuxtLink :to="localePath('/about')" class="footer-link">公司信息</NuxtLink>
+        <NuxtLink :to="localePath('/contactUs')" class="footer-link">公司信息</NuxtLink>
         <!-- <NuxtLink :to="localePath('/privacy')" class="footer-link">隐私声明</NuxtLink>
         <NuxtLink :to="localePath('/cookies')" class="footer-link">Cookie声明</NuxtLink> -->
       </nav>
