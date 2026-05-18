@@ -18,57 +18,58 @@ import heroBg from "~/assets/img/products/Flang/1.png";
 import pubFooter from "./pubFooter.vue";
 import pubTop from "./pubTop.vue";
 
-import caseImg1 from "~/assets/img/products/Shaft/6.png";
-import caseImg2 from "~/assets/img/products/Shaft/7.png";
-import caseImg3 from "~/assets/img/products/Shaft/8.png";
-import caseImg4 from "~/assets/img/products/Shaft/9.png";
+import caseImg1 from "~/assets/img/products/FLang/6.png";
+import caseImg2 from "~/assets/img/products/FLang/7.png";
+import caseImg3 from "~/assets/img/products/FLang/8.png";
+import caseImg4 from "~/assets/img/products/FLang/9.png";
 import anli from "~/assets/img/products/Flang/3.png";
+const { t, tm, rt } = useI18n();
+const p = "products.flange" as const;
+
 const imgCustomCase = ref({
   src: anli,
 });
 
-const facility = ref({
+const facility = computed(() => ({
   turning: {
-    title: "车削区",
-    desc: "多台先进设备\n精度高，规格全。",
-    imgAlt: "车削区数控车床设备",
+    title: t(`${p}.facility.turning.title`),
+    desc: t(`${p}.facility.turning.desc`),
+    imgAlt: t(`${p}.facility.turning.imgAlt`),
   },
   processing: {
-    title: "加工区",
-    desc: "有多台加工中心、数控车床、各种型号铣床、 磨床、线切割等，设备丰富。",
-    imgAlt: "加工区车间与机加工设备",
+    title: t(`${p}.facility.processing.title`),
+    desc: t(`${p}.facility.processing.desc`),
+    imgAlt: t(`${p}.facility.processing.imgAlt`),
   },
-});
-const caseList = ref([
-  {
-    title: "船舶法兰",
-    desc: "推进轴大型法兰(重载轴系用)",
-    leftImg: caseImg1,
-    rightImg: caseImg2,
-  },
-  {
-    title: "风电法兰",
-    desc: "风电塔筒法兰(带颈重载型)",
-    leftImg: caseImg3,
-    rightImg: caseImg4,
-  },
-]);
-const customCases = ref({
-  ariaLabel: "定制案例展示-法兰展示",
-  title: "定制案例展示-法兰展示",
-  subtitle: "30年间服务多个行业多个领域客户",
-  imgAlt: "定制案例展示-法兰展示",
-});
-/** 中文 Hero 文案（后续可迁入 zh.json）；英文走 en.json productPage.flange */
-const hero = ref({
-  heroTitle1: "非标法兰 ",
-  heroTitle2: "高级定制加工",
-  heroBullets: ["· 规格多样", "· 精准尺寸", "· 优选材质", "· 精工细作"],
-  heroDesc3: "最大加工尺寸:直径1.5m",
-});
-const { t, tm, locale } = useI18n();
-const p = "productPage.flange" as const;
+}));
 
+const caseImagePairs = [
+  [caseImg1, caseImg2],
+  [caseImg3, caseImg4],
+] as const;
+
+const caseList = computed(() =>
+  (tm(`${p}.cases`) as Array<{ title: string; desc: string }>).map((item, index) => ({
+    title: rt(item.title),
+    desc: rt(item.desc),
+    leftImg: caseImagePairs[index][0],
+    rightImg: caseImagePairs[index][1],
+  })),
+);
+
+const customCases = computed(() => ({
+  ariaLabel: t(`${p}.customCases.ariaLabel`),
+  title: t(`${p}.customCases.title`),
+  subtitle: t(`${p}.customCases.subtitle`),
+  imgAlt: t(`${p}.customCases.imgAlt`),
+}));
+
+const hero = computed(() => ({
+  heroTitle1: t(`${p}.hero.titleLine1`),
+  heroTitle2: t(`${p}.hero.titleLine2`),
+  heroBullets: (tm(`${p}.hero.bullets`) as string[]).map((item) => rt(item)),
+  heroDesc3: t(`${p}.hero.detailLine`),
+}));
 </script>
 
 <style scoped lang="scss">

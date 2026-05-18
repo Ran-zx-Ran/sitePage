@@ -28,7 +28,7 @@ definePageMeta({
   layout: "no-footer",
 });
 
-const { t } = useI18n();
+const { t, tm, rt } = useI18n();
 usePageSeo("contactUs");
 import { ref } from "vue";
 import contactUsImg1 from "~/assets/img/contactUs/phone.png";
@@ -36,28 +36,15 @@ import contactUsImg2 from "~/assets/img/contactUs/phone2.png";
 import contactUsImg3 from "~/assets/img/contactUs/phone2.png";
 import contactUsImg4 from "~/assets/img/contactUs/youxiang.png";
 import contactUsImg5 from "~/assets/img/contactUs/weizhi.png";
-const contactUsCards = ref([
-  {
-    text: "+86-22-86993965",
-    img: contactUsImg1,
-  },
-  {
-    text: "+86-15502212357(耿先生)",
-    img: contactUsImg2,
-  },
-  {
-    text: "+86-13752727462(秦经理)",
-    img: contactUsImg3,
-  },
-  {
-    text: "sale@tjbeixiang.com",
-    img: contactUsImg4,
-  },
-  {
-    text: "中国天津市北辰区北辰科技园景观东路17号",
-    img: contactUsImg5,
-  },
-]);
+
+const contactImages = [contactUsImg1, contactUsImg2, contactUsImg3, contactUsImg4, contactUsImg5];
+
+const contactUsCards = computed(() =>
+  (tm("contactUs.cards") as string[]).map((text, index) => ({
+    text: rt(text),
+    img: contactImages[index],
+  })),
+);
 </script>
 
 <style scoped lang="scss">

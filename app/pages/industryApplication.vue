@@ -9,7 +9,7 @@
       </h1>
     </section>
 
-    <section class="content" aria-label="行业应用">
+    <section class="content" :aria-label="t('industryApplication.aria.content')">
       <div class="content__inner">
         <article
           v-for="(item, index) in contentItems"
@@ -57,6 +57,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
 import industryApplicationImg2 from "~/assets/img/industryApplication/2.png";
 import industryApplicationImg3 from "~/assets/img/industryApplication/3.png";
 import industryApplicationImg4 from "~/assets/img/industryApplication/4.png";
@@ -71,7 +72,7 @@ import industryApplicationImg12 from "~/assets/img/industryApplication/12.png";
 import industryApplicationImg13 from "~/assets/img/industryApplication/13.png";
 import industryArrowImg from "~/assets/img/industryApplication/jiantou.png";
 
-const { t } = useI18n();
+const { t, tm, rt } = useI18n();
 usePageSeo("industryApplication");
 
 interface IndustryItem {
@@ -82,40 +83,34 @@ interface IndustryItem {
   imgList: string[];
 }
 
-const contentItems: IndustryItem[] = [
+const cardMedia = [
   {
-    title: "新能源行业",
-    description:
-      "我们深耕新能源装备制造领域，专注于为风电行业提供核心零部件解决方案。公司主要产品包括轴类和法兰类等关键零部件，主要应用于风力发电机组的主轴、发电机轴、机舱法兰、轮毂法兰等关键部位。产品严格遵循风电行业的严苛标准，适用于陆上和海上风机需求，具备高强度、耐腐蚀、耐低温等优异性能，保障风机在复杂户外环境下的长期稳定运行，助力风电产业实现高效、安全发电，为清洁能源发展提供可靠支撑。",
     subImg: industryApplicationImg4,
     imgList: [industryApplicationImg2, industryApplicationImg3],
   },
   {
-    title: "医疗健康行业",
-    description:
-      "依托精密加工技术，我们为医疗健康行业提供定制化的金属零部件服务。核心产品包括不锈钢及高精度钣金壳体，如医疗监护仪外壳、超声诊断设备钣金件、输液泵不锈钢支架、无菌器械储存盒等医疗设备及配件。产品采用医疗级不锈钢材料，通过激光切割、数控折弯等精密工艺加工，确保尺寸精度与表面光洁度，具备优异的耐腐蚀性、易清洁性和生物相容性，严格满足医疗领域对无菌、稳定的核心诉求，保障医疗设备的安全运行。",
     subImg: industryApplicationImg5,
     imgList: [industryApplicationImg6, industryApplicationImg7],
   },
   {
-    title: "造船行业",
-    description:
-      "专注于船舶装备与配套领域，我们为各型船舶(如应急救援艇、散货船等)提供轴类、法兰类等关键传动部件。产品应用于船舶传动系统的关键部位，包括船舶推进轴、艉轴、螺旋桨法兰、主机连接法兰等。",
-    description2:
-      "产品采用高强度可焊钢材料制造，经精密加工与严格检测，确保与船舶轴系连接、动力传递等核心应用兼容。具有结构坚固、耐磨、耐海水腐蚀性能强的特点，可有效应对船舶在运行中面临的复杂海洋环境，保障船舶轴系稳定可靠运行，提升航行安全性与可靠性。",
     subImg: industryApplicationImg8,
     imgList: [industryApplicationImg9, industryApplicationImg10],
   },
   {
-    title: "AI自动化行业",
-    description:
-      "紧跟自动化行业发展潮流，我们为人形机器人领域提供高精度零部件，覆盖关节传动、结构支撑等核心部件。产品主要应用于人形机器人的关键部位，包括关节轴承、谐波减速器外壳、手指传动轴、前臂支撑件等。",
-    description2:
-      "我们采用先进制造工艺，严格控制尺寸公差，确保产品具备轻量化、高强度、低摩擦特性，适配人形机器人的灵巧手指、前臂关节、腰部旋转系统等关键组件需求，满足高频次运动与高负载承载要求。助力人形机器人实现精准运动与稳定性能，为自动化行业的发展提供关键零部件支持。",
     subImg: industryApplicationImg11,
     imgList: [industryApplicationImg12, industryApplicationImg13],
   },
-];
+] as const;
+
+const contentItems = computed<IndustryItem[]>(() =>
+  (tm("industryApplication.cards") as Array<Omit<IndustryItem, "subImg" | "imgList">>).map((item, index) => ({
+    title: rt(item.title),
+    description: rt(item.description),
+    description2: item.description2 ? rt(item.description2) : undefined,
+    subImg: cardMedia[index].subImg,
+    imgList: [...cardMedia[index].imgList],
+  })),
+);
 </script>
 
 <style scoped lang="scss">

@@ -2,10 +2,14 @@
   <div class="nav flex items-center">
     <div class="nav-content flex items-center justify-between">
       <img class="logo" src="@/assets/img/logo.png" alt="" />
-      <nav class="flex items-center gap-8" aria-label="主导航">
-        <NuxtLink :to="localePath('/')" class="nav-link" :class="{ 'nav-link--active': isExact('/') }"> 首页 </NuxtLink>
+      <nav class="flex items-center gap-8" :aria-label="t('layout.header.aria.mainNav')">
+        <NuxtLink :to="localePath('/')" class="nav-link" :class="{ 'nav-link--active': isExact('/') }">
+          {{ t("layout.header.nav.home") }}
+        </NuxtLink>
         <div class="nav-dropdown">
-          <NuxtLink :to="localePath('/products/shaft')" class="nav-link" :class="{ 'nav-link--active': isUnder('/products') }"> 产品 </NuxtLink>
+          <NuxtLink :to="localePath('/products/shaft')" class="nav-link" :class="{ 'nav-link--active': isUnder('/products') }">
+            {{ t("layout.header.nav.products") }}
+          </NuxtLink>
           <div class="dropdown-panel" role="menu">
             <NuxtLink v-for="item in productItems" :key="item.to" :to="localePath(item.to)" class="dropdown-item" role="menuitem">
               {{ item.label }}
@@ -13,44 +17,63 @@
           </div>
         </div>
 
-        <NuxtLink :to="localePath('/developmentHistory')" class="nav-link" :class="{ 'nav-link--active': isExact('/developmentHistory') }"> 发展历程 </NuxtLink>
-        <NuxtLink :to="localePath('/industryApplication')" class="nav-link" :class="{ 'nav-link--active': isExact('/industryApplication') }">
-          行业应用
+        <NuxtLink :to="localePath('/developmentHistory')" class="nav-link" :class="{ 'nav-link--active': isExact('/developmentHistory') }">
+          {{ t("layout.header.nav.developmentHistory") }}
         </NuxtLink>
-        <NuxtLink :to="localePath('/contactUs')" class="nav-link" :class="{ 'nav-link--active': isExact('/contactUs') }"> 联系我们 </NuxtLink>
-        <img class="languageIcon" src="@/assets/img/language.png" alt="" />
+        <NuxtLink :to="localePath('/industryApplication')" class="nav-link" :class="{ 'nav-link--active': isExact('/industryApplication') }">
+          {{ t("layout.header.nav.industryApplication") }}
+        </NuxtLink>
+        <NuxtLink :to="localePath('/contactUs')" class="nav-link" :class="{ 'nav-link--active': isExact('/contactUs') }">
+          {{ t("layout.header.nav.contactUs") }}
+        </NuxtLink>
+        <!--
+          语言切换入口：
+          1. 使用 Nuxt i18n 提供的 switchLocalePath 生成“当前页面对应的另一种语言地址”；
+          2. 这样点击图标后不会固定跳首页，而是停留在当前业务页面完成中英文切换；
+          3. 当用户当前为中文时切到英文，当前为英文时切回中文。
+        -->
+        <NuxtLink :to="switchLanguagePath" class="language-switch" :aria-label="t('layout.header.languageIconAlt')" :title="t('layout.header.languageIconAlt')">
+          <img class="languageIcon" src="@/assets/img/language.png" :alt="t('layout.header.languageIconAlt')" />
+        </NuxtLink>
       </nav>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-// 直接使用 vue-router 当前路由的响应式 ref，
-// 避免头部作为布局常驻组件时，激活态在页面切换后出现更新慢一拍的问题。
 const router = useRouter();
-// 国际化路径
+const { t, locale } = useI18n();
 const localePath = useLocalePath();
-// 当前页面的标准化路径。
-// 这里使用 computed 包一层，确保顶部菜单激活态始终跟随最新路由立即刷新。
+const switchLocalePath = useSwitchLocalePath();
 const currentPath = computed(() => normalizePath(router.currentRoute.value.path));
-// 产品列表
-const productItems = [
-  { label: "轴类产品", to: "/products/shaft" },
-  { label: "法兰类产品", to: "/products/flange" },
-  { label: "阀组类产品", to: "/products/valve" },
-  { label: "喷漆钣金零件", to: "/products/sheet-metal" },
-  { label: "AI自动化产品", to: "/products/ai-automation" },
-] as const;
-// 标准化路径
+
+// 当前站点只有中英文两种语言，这里根据当前语言反推出“目标语言”。
+const targetLocale = computed(() => (locale.value === "zh" ? "en" : "zh"));
+
+// 生成当前页面对应的另一语言地址。
+// 例如：
+// - 当前在 `/contactUs` 时，点击后跳到 `/en/contactUs`
+// - 当前在 `/en/products/shaft` 时，点击后跳到 `/products/shaft`
+const switchLanguagePath = computed(() => switchLocalePath(targetLocale.value) || localePath("/"));
+
+// 头部产品菜单直接从国际化资源读取，避免下拉项残留硬编码中文。
+const productItems = computed(() => [
+  { label: t("layout.header.productMenu.shaft"), to: "/products/shaft" },
+  { label: t("layout.header.productMenu.flange"), to: "/products/flange" },
+  { label: t("layout.header.productMenu.valve"), to: "/products/valve" },
+  { label: t("layout.header.productMenu.sheetMetal"), to: "/products/sheet-metal" },
+  { label: t("layout.header.productMenu.aiAutomation"), to: "/products/ai-automation" },
+]);
+
 function normalizePath(p: string) {
   if (!p || p === "/") return "/";
   return p.replace(/\/$/, "") || "/";
 }
-// 判断是否是精确路径
+
 function isExact(path: string) {
   return currentPath.value === normalizePath(localePath(path));
 }
-// 判断是否在路径下
+
 function isUnder(path: string) {
   const base = normalizePath(localePath(path));
   return currentPath.value === base || currentPath.value.startsWith(`${base}/`);
@@ -71,11 +94,18 @@ function isUnder(path: string) {
   width: 100%;
 }
 .languageIcon {
-  margin-left: auto;
   width: 28px;
   height: 28px;
   cursor: pointer;
   margin-top: -2px;
+}
+
+.language-switch {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .nav .logo {

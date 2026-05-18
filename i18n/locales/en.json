@@ -1,197 +1,509 @@
 {
   "site": {
-    "name": "Company",
-    "tagline": "Precision manufacturing and industry solutions",
-    "footer": "© Placeholder — replace with your copy"
-  },
-  "nav": {
-    "home": "Home",
-    "about": "About",
-    "products": "Products",
-    "developmentHistory": "History",
-    "industryApplication": "Applications",
-    "contactUs": "Contact"
-  },
-  "actions": {
-    "learnMore": "Learn more",
-    "switchLang": "Switch language",
-    "contact": "Contact us"
-  },
-  "footer": {
-    "rights": "© {year} {name}. All rights reserved.",
-    "contactHeading": "Contact",
-    "linksHeading": "Links"
-  },
-  "contact": {
-    "values": {
-      "phone": "Phone: 000-0000-0000",
-      "email": "Email: hello{'@'}example.com",
-      "address": "Address: replace with your address"
-    }
+    "name": "天津市北翔机械有限公司",
+    "tagline": "专注精密制造与行业解决方案"
   },
   "seo": {
     "home": {
-      "title": "Company — Integrity, Quality, Innovation",
-      "description": "Machining and precision components. Partnerships with industry leaders."
-    },
-    "about": {
-      "title": "About — Company",
-      "description": "About page placeholder description."
+      "title": "首页 — 天津市北翔机械有限公司",
+      "description": "诚信铸就品质 创新引领未来"
     },
     "developmentHistory": {
-      "title": "Development History — Company",
-      "description": "Company milestones from founding to global partnerships, product expansion, and smart manufacturing."
+      "title": "发展历程 — 天津市北翔机械有限公司",
+      "description": "企业发展历程：从成立到全球化合作与智能化制造的里程碑。"
     },
     "contactUs": {
-      "title": "Contact — Company",
-      "description": "How to reach us for business inquiries."
+      "title": "联系我们 — 天津市北翔机械有限公司",
+      "description": "联系方式与业务咨询。"
     },
     "industryApplication": {
-      "title": "Industry Applications — Company",
-      "description": "Applications and solutions across industries."
+      "title": "行业应用 — 天津市北翔机械有限公司",
+      "description": "精密制造在各行业的应用场景与解决方案。"
     },
     "productsShaft": {
-      "title": "Shafts — Company",
-      "description": "Precision shaft parts: power transmission, stepped shafts, and custom machining."
+      "title": "轴类产品 — 天津市北翔机械有限公司",
+      "description": "精密轴类零部件：传动轴、阶梯轴及定制化轴件加工与交付。"
     },
     "productsFlange": {
-      "title": "Flanges — Company",
-      "description": "Standard and custom flanges for sealed connections and batch production."
+      "title": "法兰类产品 — 天津市北翔机械有限公司",
+      "description": "标准及非标法兰：多规格密封连接件与批量机加工能力。"
     },
     "productsValve": {
-      "title": "Valve manifolds — Company",
-      "description": "Hydraulic valve blocks and integrated manifold assembly with precision passages."
+      "title": "阀组类产品 — 天津市北翔机械有限公司",
+      "description": "液压与流体阀组模块：集成化阀块与精密加工装配。"
     },
     "productsSheetMetal": {
-      "title": "Painted sheet metal — Company",
-      "description": "Fabrication, welding, and coating for sheet-metal parts in one workflow."
+      "title": "喷漆钣金零件 — 天津市北翔机械有限公司",
+      "description": "钣金成型、焊接与表面喷涂：一站式金属外观件制造。"
     },
     "productsAiAutomation": {
-      "title": "AI automation — Company",
-      "description": "Smart manufacturing and automation products aligned with precision machining."
+      "title": "AI自动化产品 — 天津市北翔机械有限公司",
+      "description": "智能制造与自动化产线相关产品与方案。"
     }
   },
-  "contactUs": {
-    "lead": "This page is coming soon. Use the email and phone in the site footer to reach us."
-  },
-  "industryApplication": {
-    "lead": "This page is coming soon."
-  },
-  "developmentHistory": {
-    "heroTitle": "Development History"
-  },
-  "home": {
-    "hero": {
-      "title": "Integrity builds quality. Innovation leads the future.",
-      "subtitle": "Machining and precision components with deep partnerships worldwide."
+  "layout": {
+    "header": {
+      "aria": {
+        "mainNav": "主导航"
+      },
+      "nav": {
+        "home": "HOME",
+        "products": "PRODUCTS",
+        "developmentHistory": "DEVELOPMENT ISTORY",
+        "industryApplication": "Industry Application",
+        "contactUs": "CONTACT US"
+      },
+      "productMenu": {
+        "shaft": "Shaft Products",
+        "flange": "Flange Products",
+        "valve": "Valve Manifold Products ",
+        "sheetMetal": "Painted Sheet Metal Parts",
+        "aiAutomation": "AI Automation Products"
+      },
+      "languageIconAlt": "Language Switch"
     },
-    "factory": {
-      "title": "Factory video"
-    },
-    "products": {
-      "title": "Products",
-      "items": {
-        "shaft": {
-          "title": "Shafts",
-          "desc": "Precision shaft parts"
-        },
-        "flange": {
-          "title": "Flanges",
-          "desc": "Standard and custom flanges"
-        },
-        "valve": {
-          "title": "Valve blocks",
-          "desc": "Hydraulic valves and modules"
-        },
-        "painted": {
-          "title": "Paint & sheet metal",
-          "desc": "Painting and sheet metal"
-        },
-        "ai": {
-          "title": "AI automation",
-          "desc": "Automation and smart inspection"
-        }
+    "footer": {
+      "contact": {
+        "email": "Email: sale{'@'}tjbeixiang.com",
+        "phone": "Phone: +86-022-86993965",
+        "service": "24小时 Response"
+      },
+      "aria": {
+        "links": "页脚链接"
+      },
+      "links": {
+        "companyInfo": "Corporate information"
       }
     }
   },
-  "about": {
-    "title": "About us",
-    "body": "This page demonstrates routing and SEO. When adding pages, update locales, sitemap, and usePageSeo keys."
+  "home": {
+    "hero": {
+      "titleLine1": "Quality through Integrity",
+      "titleLine2": "Future through Innovation",
+      "subtitleLine1": "Involving mechanical processing and sheet metal welding",
+      "subtitleLine2": "Deep cooperation with Fortune 500 companies"
+    },
+    "factory": {
+      "sectionTitle": "Factory Video Introduction"
+    },
+    "products": {
+      "sectionTitle": "​Product Type",
+      "cards": [
+        {
+          "title": "Non-Standard Shafts",
+          "desc": ["Internal & External Threading", "Shoulder Turning / Step Turning", "Keyway Milling", "Other Processes"]
+        },
+        {
+          "title": "CNC Precision Sheet Metal  Spraying",
+          "desc": ["Laser Cutting", "CNC Bending", "Custom Welding", "CNC Gantry Machining"]
+        },
+        {
+          "title": "Hydraulic Manifold",
+          "desc": ["Long Service Life", "Durable and Long-Lasting", "Quality Assured", "Safe and Reliable"]
+        },
+        {
+          "title": "Non-Standard Flanges",
+          "desc": ["Wide Range of Specifications", "Precise Dimensions", "High-Quality Materials", "Fine Craftsmanship"]
+        },
+        {
+          "title": "Intelligent Components  for Automation",
+          "desc": ["Laser Cutting", "CNC Bending", "Custom Welding", "CNC Gantry Machining"]
+        }
+      ]
+    },
+    "why": {
+      "sectionTitle": "Why Choose Us",
+      "subtitle": "Excellent Parts & Technical Support, Cost Advantages, Personal Pay Backs & Environmental Benefits.",
+      "cards": [
+        {
+          "title": "世界500强\n长期合作伙伴",
+          "desc": "深耕精密机械加工领域，是西门子、弗兰德、维斯塔斯等世界500强企业的长期合格供应商，产品品质与交付能力经国际标杆客户严苛验证。"
+        },
+        {
+          "title": "全体系国际\n权威认证加持",
+          "desc": "已通过ISO9001质量管理、ISO3834焊接质量、ISO45001职业健康安全、ISO14001环境管理四大国际权威认证，全流程标准化管控，筑牢品质与合规双底线。"
+        },
+        {
+          "title": "全周期一站式\n售后服务",
+          "desc": "专业的售后技术服务团队，可快速响应客户需求，提供安装调试、现场技术指导、故障维修、维保升级等全流程服务，全程护航客户生产无忧。"
+        }
+      ]
+    },
+    "about": {
+      "sectionTitle": "关于我们",
+      "imageAlt": "公司厂房与环境",
+      "introParagraph1": "我们的能力涵盖机械加工、钣金制造与焊接工艺，并为风电能源领域提供自动化解决方案。我们严格遵循IS09001质量管理体系与ISO3834焊接质量国际标准，确保全流程的卓越品质。",
+      "introParagraph2": "秉承“质量为先，客户至上”的原则，我们已与多家《财富》500强企业建立了深度合作，包括久益全球(JoyGlobal)、弗兰德(Flender)、西门子(Siemens)、威能极(Winergy)和戴纳帕克(Dynapac)。",
+      "ctaText": "查看更多"
+    },
+    "cert": {
+      "sectionTitle": "认证证书",
+      "subtitlePrimary": "品质认证",
+      "subtitleSecondary": "权威认可",
+      "ctaText": "立即咨询",
+      "certificateAltSuffix": "认证证书"
+    },
+    "trade": {
+      "sectionTitle": "国际贸易",
+      "imageAltMain": "智能仓储与国际物流",
+      "imageAltTop": "出口包装与运输",
+      "imageAltBottom": "全球贸易网络",
+      "lead1": "拥有超过10年的国际贸易经验。",
+      "lead2": "我们为全球超过30个国家的客户提供服务，对国际市场需求有着深刻的理解。我们致力于将全球信赖的国际品质，同样可靠地带到您的面前。",
+      "bullets": ["包装完整安全。", "拥有独立的进出口权。", "业务覆盖全球超过30个国家。", "公司超50%销售业绩源于海外订单。"],
+      "ctaText": "立即咨询"
+    },
+    "serviceFlow": {
+      "sectionTitle": "非标定制一站式合作服务流程",
+      "ariaLabel": "非标定制一站式合作服务流程",
+      "steps": ["客户咨询", "客户服务", "拜访客户", "解决方案", "下订单", "面对面沟通", "制造（生产）", "工厂验收测试", "现场安装", "售后服务"]
+    },
+    "shippingFlow": {
+      "sectionTitle": "标准运输流程",
+      "ariaLabel": "标准运输流程",
+      "steps": [
+        "生产完成",
+        "最终检验及测试报告出具",
+        "客户订单跟进确认",
+        "激光打标/雕刻",
+        "去毛刺、清洁与干燥",
+        "防锈处理",
+        "内包装密封与贴标",
+        "缓冲与防护",
+        "捆扎与固定",
+        "码垛（或托盘化）",
+        "粘贴运输标识与警示标签",
+        "物流抵达港口",
+        "集装箱装货",
+        "发送清关文件",
+        "目的港清关",
+        "送货至客户工厂"
+      ]
+    },
+    "partners": {
+      "sectionTitle": "合作伙伴展示",
+      "photoAlts": [
+        "合作伙伴展示：厂区交流与合影 1",
+        "合作伙伴展示：厂区交流与合影 2",
+        "合作伙伴展示：厂区交流与合影 3",
+        "合作伙伴展示：厂区交流与合影 4",
+        "合作伙伴展示：厂区交流与合影 5",
+        "合作伙伴展示：厂区交流与合影 6",
+        "合作伙伴展示：厂区交流与合影 7",
+        "合作伙伴展示：厂区交流与合影 8",
+        "合作伙伴展示：厂区交流与合影 9"
+      ]
+    }
   },
-  "productPage": {
+  "contactUs": {
+    "heroTitle": "联系我们",
+    "cards": ["+86-22-86993965", "+86-15502212357(耿先生)", "+86-13752727462(秦经理)", "sale{'@'}tjbeixiang.com", "中国天津市北辰区北辰科技园景观东路17号"]
+  },
+  "industryApplication": {
+    "heroTitle": "行业应用",
+    "aria": {
+      "content": "行业应用"
+    },
+    "cards": [
+      {
+        "title": "新能源行业",
+        "description": "我们深耕新能源装备制造领域，专注于为风电行业提供核心零部件解决方案。公司主要产品包括轴类和法兰类等关键零部件，主要应用于风力发电机组的主轴、发电机轴、机舱法兰、轮毂法兰等关键部位。产品严格遵循风电行业的严苛标准，适用于陆上和海上风机需求，具备高强度、耐腐蚀、耐低温等优异性能，保障风机在复杂户外环境下的长期稳定运行，助力风电产业实现高效、安全发电，为清洁能源发展提供可靠支撑。"
+      },
+      {
+        "title": "医疗健康行业",
+        "description": "依托精密加工技术，我们为医疗健康行业提供定制化的金属零部件服务。核心产品包括不锈钢及高精度钣金壳体，如医疗监护仪外壳、超声诊断设备钣金件、输液泵不锈钢支架、无菌器械储存盒等医疗设备及配件。产品采用医疗级不锈钢材料，通过激光切割、数控折弯等精密工艺加工，确保尺寸精度与表面光洁度，具备优异的耐腐蚀性、易清洁性和生物相容性，严格满足医疗领域对无菌、稳定的核心诉求，保障医疗设备的安全运行。"
+      },
+      {
+        "title": "造船行业",
+        "description": "专注于船舶装备与配套领域，我们为各型船舶(如应急救援艇、散货船等)提供轴类、法兰类等关键传动部件。产品应用于船舶传动系统的关键部位，包括船舶推进轴、艉轴、螺旋桨法兰、主机连接法兰等。",
+        "description2": "产品采用高强度可焊钢材料制造，经精密加工与严格检测，确保与船舶轴系连接、动力传递等核心应用兼容。具有结构坚固、耐磨、耐海水腐蚀性能强的特点，可有效应对船舶在运行中面临的复杂海洋环境，保障船舶轴系稳定可靠运行，提升航行安全性与可靠性。"
+      },
+      {
+        "title": "AI自动化行业",
+        "description": "紧跟自动化行业发展潮流，我们为人形机器人领域提供高精度零部件，覆盖关节传动、结构支撑等核心部件。产品主要应用于人形机器人的关键部位，包括关节轴承、谐波减速器外壳、手指传动轴、前臂支撑件等。",
+        "description2": "我们采用先进制造工艺，严格控制尺寸公差，确保产品具备轻量化、高强度、低摩擦特性，适配人形机器人的灵巧手指、前臂关节、腰部旋转系统等关键组件需求，满足高频次运动与高负载承载要求。助力人形机器人实现精准运动与稳定性能，为自动化行业的发展提供关键零部件支持。"
+      }
+    ]
+  },
+  "developmentHistory": {
+    "heroTitle": "发展历程",
+    "aria": {
+      "timeline": "发展时间轴"
+    },
+    "timeline": [
+      {
+        "year": "2005",
+        "desc": "公司成立"
+      },
+      {
+        "year": "2006",
+        "desc": "我们已与弗兰德(Flender)、西门子(Siemens)、威能极(Winergy)、维斯塔斯(Vestas)等多家全球《财富》500强企业开展合作，专注于环类和套类产品的生产(例如:轴承座圈、齿轮套、联轴器套等)。"
+      },
+      {
+        "year": "2017",
+        "desc": "我们积极拓展新的业务领域，现已与久益全球(Joy Global)和戴纳帕克(Dynapac)建立合作伙伴关系，为其提供专业工业部件与解决方案。"
+      },
+      {
+        "year": "2020",
+        "desc": "我们已扩展产品线，现涵盖环类与套类、轴类产品的精密加工以及钣金制造，为工业应用提供更广泛的组件选择。"
+      },
+      {
+        "year": "2022",
+        "desc": "拓展至新业务领域我们已与国轩高科(Gotion High-tech)和亿能电力(E-Power Technologies)建立合作伙伴关系，共同开发并供应新能源与电力系统组件。"
+      },
+      {
+        "year": "2025",
+        "desc": "我们已引进新的检测与生产设备，并推行自动化管理，以提升整体制造能力。"
+      },
+      {
+        "year": "2026",
+        "desc": "我们已新增设备、扩建厂房并扩充团队，以支持规模化生产与运营增长。"
+      }
+    ]
+  },
+  "products": {
+    "index": {
+      "pageTitle": "产品",
+      "heading": "产品"
+    },
     "common": {
-      "heroBadge": "Custom metal work from drawings & samples",
-      "heroFootnote": "Minimum precision: 0.001 mm"
+      "hero": {
+        "badge": "金属加工 来图来样加工定制",
+        "defaultFootnote": "最小精度：0.001 毫米"
+      },
+      "top": {
+        "caseSectionTitle": "案例展示",
+        "paintBoothCapacityTag": "最大5吨"
+      },
+      "footer": {
+        "materials": {
+          "sectionTitle": "材质无限制",
+          "sectionAria": "材质无限制",
+          "lead": "我们专注于全系列金属材料的定制加工，覆盖所有材料类别。",
+          "items": ["不锈钢", "铜材", "铝合金材料", "碳钢", "不锈钢", "优特钢"]
+        },
+        "applications": {
+          "sectionTitle": "应用场景",
+          "sectionAria": "应用场景",
+          "lead": "我们的产品广泛应用于各个行业，包括新能源、医疗、造船和工程机械领域。",
+          "items": ["太阳能与风能(领域)", "医疗行业", "造船行业", "AI机器人行业", "新能源储能行业", "新能源汽车行业"]
+        },
+        "quality": {
+          "sectionTitle": "卓越与精准   严格的质量控制",
+          "sectionAria": "卓越与精准与严格的质量控制",
+          "lead": "先进的检测设备与专业的技术人员确保产品符合GB、DIN、ANSI、BS、JIS等相关标准。",
+          "items": ["专业工具", "专业检验人员", "大型三坐标检测仪", "质量看板", "超声波探伤检测", "光谱检测", "热处理试验台", "表面处理检测", "3D扫描"]
+        },
+        "paintPartners": {
+          "sectionTitle": "检测设备及油漆合作商",
+          "lead": "我们所用的油漆涂料，均为国际一线品牌大厂如阿克苏诺贝尔、海虹老人、PPG大师漆、佩特、佐敦等"
+        },
+        "technology": {
+          "sectionTitle": "工艺技术",
+          "subTitle": "【资深工艺技术工程师团队】",
+          "highlight": "8小时极速报价·24小时单件快样",
+          "lead": "资深工艺技术工程师团队坐镇，全程精细化设计严控工序精度，科学控制成本，为您提供定制化最优解决方案。"
+        },
+        "tracking": {
+          "sectionTitle": "物料追踪",
+          "subTitle": "【STS智能订单物料跟踪管理系统】",
+          "highlight": "智能化、数字化管理，每一步都有迹可循"
+        }
+      }
     },
     "shaft": {
-      "heroTitle1": "Mid-to-large non-standard shafts",
-      "heroTitle2": "Advanced custom machining",
-      "heroBullets": [
-        "· Internal & external threading",
-        "· Step turning / multi-diameter turning",
-        "· Keyway milling",
-        "· Additional processes on request"
+      "bodyAria": "轴类产品介绍",
+      "hero": {
+        "titleLine1": "中大型非标轴类",
+        "titleLine2": "高级定制加工",
+        "bullets": ["· 内螺纹与外螺纹加工", "· 台阶车削 / 阶梯车削", "· 键槽铣削", "· 其他工艺"]
+      },
+      "facility": {
+        "turning": {
+          "title": "车削区",
+          "desc": "设备先进齐全\n精度高，规格全。",
+          "imgAlt": "车削区数控车床设备"
+        },
+        "processing": {
+          "title": "加工区",
+          "desc": "我们配备了全面的设备，包括加工中心、数控车床、多种型号的铣床、磨床以及线切割电火花机。",
+          "imgAlt": "加工区车间与机加工设备"
+        }
+      },
+      "cases": [
+        {
+          "title": "发电机轴",
+          "desc": "其表面极为坚硬，内芯则兼具韧性与延展性，从而具有卓越的抗冲击和耐磨损性能。"
+        },
+        {
+          "title": "中间轴",
+          "desc": "其晶粒细腻、组织致密，具有高抗疲劳特性，确保了出色的断裂韧性与稳定可靠的无故障运行性能。"
+        },
+        {
+          "title": "船用轴/船舶轴",
+          "desc": "它具有优异的耐腐蚀性和长使用寿命，同时在高负荷应用场景下具备出色的承载能力。"
+        }
       ],
-      "bodyAria": "Shaft products overview",
-      "lead": "Add materials, typical processes, inspection, and case studies here.",
-      "facilityTurningTitle": "Turning area",
-      "facilityTurningDesc": "Advanced, well-equipped machinery.\nHigh precision. Full specification range.",
-      "facilityTurningImgAlt": "CNC turning machine in the turning area",
-      "facilityProcessingTitle": "Machining area",
-      "facilityProcessingDesc": "We maintain a comprehensive machine park including machining centers, CNC lathes, multiple milling machines, grinders, and wire EDM equipment.",
-      "facilityProcessingImgAlt": "Shop floor and machining equipment in the processing area",
-      "customCasesAriaLabel": "Custom case gallery for non-standard shaft products",
-      "customCasesTitle": "Custom case display: Non-standard shaft products",
-      "customCasesSubtitle": "With 30 years of industry experience, we have provided professional services to customers across many sectors.",
-      "customCaseImgAlt": "Custom case showcase for non-standard shaft products"
+      "customCases": {
+        "ariaLabel": "非标轴类产品定制案例展示",
+        "title": "定制案例展示:非标轴类产品",
+        "subtitle": "凭借30年的行业经验，我们已为众多领域的客户提供了专业服务。",
+        "imgAlt": "非标轴类产品定制案例展示"
+      }
     },
     "flange": {
-      "heroTitle1": "Precision flange manufacturing",
-      "heroTitle2": "Sealed connections, end-to-end",
-      "heroBullets": [
-        "· Standard & custom flanges",
-        "· Face turning and hole patterns",
-        "· Seal grooves and edge breaks",
-        "· Optional heat treatment"
+      "bodyAria": "法兰类产品介绍",
+      "hero": {
+        "titleLine1": "非标法兰",
+        "titleLine2": "高级定制加工",
+        "bullets": ["· 规格多样", "· 精准尺寸", "· 优选材质", "· 精工细作"],
+        "detailLine": "最大加工尺寸:直径1.5m"
+      },
+      "facility": {
+        "turning": {
+          "title": "车削区",
+          "desc": "多台先进设备\n精度高，规格全。",
+          "imgAlt": "车削区数控车床设备"
+        },
+        "processing": {
+          "title": "加工区",
+          "desc": "有多台加工中心、数控车床、各种型号铣床、磨床、线切割等，设备丰富。",
+          "imgAlt": "加工区车间与机加工设备"
+        }
+      },
+      "cases": [
+        {
+          "title": "船舶法兰",
+          "desc": "推进轴大型法兰(重载轴系用)"
+        },
+        {
+          "title": "风电法兰",
+          "desc": "风电塔筒法兰(带颈重载型)"
+        }
       ],
-      "bodyAria": "Flange products overview",
-      "lead": "Add standards, sealing styles, grades, and industries served here."
+      "customCases": {
+        "ariaLabel": "定制案例展示-法兰展示",
+        "title": "定制案例展示-法兰展示",
+        "subtitle": "30年间服务多个行业多个领域客户",
+        "imgAlt": "定制案例展示-法兰展示"
+      }
     },
     "valve": {
-      "heroTitle1": "Hydraulic blocks & manifolds",
-      "heroTitle2": "Clean bores, tight control",
-      "heroBullets": [
-        "· Integrated circuit machining",
-        "· Cross-drills & deburring",
-        "· Test and flow checks",
-        "· Custom valve bodies to drawing"
+      "bodyAria": "阀组类产品介绍",
+      "hero": {
+        "titleLine1": "非标定制",
+        "titleLine2": "阀块/油路块",
+        "bullets": ["· 使用寿命长", "· 持久耐用", "· 质量保证", "· 安全可靠"],
+        "footnoteText": "多种规格 运转高效 经久耐用"
+      },
+      "facility": {
+        "turning": {
+          "title": "车削区",
+          "desc": "多台先进设备\n精度高，规格全。",
+          "imgAlt": "车削区数控车床设备"
+        },
+        "processing": {
+          "title": "加工区",
+          "desc": "有多台加工中心、数控车床、各种型号铣床、磨床、线切割等，设备丰富。",
+          "imgAlt": "加工区车间与机加工设备"
+        }
+      },
+      "cases": [
+        {
+          "title": "气动阀块",
+          "desc": "用于自动化设备、机器人、专机、夹具"
+        },
+        {
+          "title": "液压阀块",
+          "desc": "风电、冶金、工程机械、机床适用"
+        }
       ],
-      "bodyAria": "Valve products overview",
-      "lead": "Add design scope, typical circuits, testing, and applications here."
+      "customCases": {
+        "ariaLabel": "定制案例展示-阀块展示",
+        "title": "定制案例展示-阀块展示",
+        "subtitle": "30年间服务多个行业多个领域客户",
+        "imgAlt": "定制案例展示-阀块展示"
+      }
     },
     "sheetMetal": {
-      "heroTitle1": "Painted sheet-metal structures",
-      "heroTitle2": "Uniform finish, reliable delivery",
-      "heroBullets": [
-        "· Shear, bend, weld, and assemble",
-        "· Pretreatment and multi-coat painting",
-        "· Color and DFT consistency",
-        "· Protective packing & OQC"
+      "bodyAria": "喷漆钣金零件介绍",
+      "hero": {
+        "titleLine1": "CNC精密",
+        "titleLine2": "钣金喷涂",
+        "bullets": ["· 激光切割", "· 数控折弯", "· 非标焊接", "· 数控龙门"]
+      },
+      "facility": {
+        "turning": {
+          "title": "喷漆室",
+          "desc": "可喷涂最大工件\n6米(长)*3米(宽)*2米(高)",
+          "imgAlt": "喷漆室",
+          "showCapacityTag": true
+        },
+        "processing": {
+          "title": "喷漆室",
+          "desc": "可喷涂最大工件\n6米(长)*3米(宽)*2米(高)",
+          "imgAlt": "喷漆室",
+          "showCapacityTag": true
+        }
+      },
+      "cases": [
+        {
+          "title": "减速机护罩",
+          "desc": "尺寸:1070mm*790mm*390mm"
+        },
+        {
+          "title": "电机壳",
+          "desc": "尺寸:直径313mm 高度297mm"
+        }
       ],
-      "bodyAria": "Sheet metal overview",
-      "lead": "Add thickness range, paint systems, color control, and packing here."
+      "customCases": {
+        "ariaLabel": "定制案例展示-钣金展示",
+        "title": "定制案例展示-钣金展示",
+        "subtitle": "30年间服务多个行业多个领域客户",
+        "imgAlt": "定制案例展示-钣金展示"
+      }
     },
     "aiAutomation": {
-      "heroTitle1": "Smart manufacturing & automation",
-      "heroTitle2": "Aligned with our machining capacity",
-      "heroBullets": [
-        "· Auto load/unload & fixturing",
-        "· In-line inspection & data capture",
-        "· Bundled with shafts & valve parts",
-        "· Assessments and continuous improvement"
+      "bodyAria": "AI自动化产品介绍",
+      "hero": {
+        "titleLine1": "人工智能驱动的",
+        "titleLine2": "自动化定制组件",
+        "bullets": ["· 激光切割", "· 数控折弯", "· 非标焊接", "· 数控龙门"],
+        "detailLine": "腐蚀类别：C5（ISO 12944）",
+        "footnoteText": "高强度 · 高精度 · 高硬度 · 高稳定性"
+      },
+      "facility": {
+        "turning": {
+          "title": "车床区",
+          "desc": "设备先进，精度高\n规格全",
+          "imgAlt": "车床区"
+        },
+        "processing": {
+          "title": "加工区",
+          "desc": "我们的精密制造能力由多元化的设备组合支撑，涵盖加工中心、数控车床，以及全套铣削、磨削和线切割机床。",
+          "imgAlt": "加工区"
+        }
+      },
+      "cases": [
+        {
+          "title": "RV减速机",
+          "desc": "高刚性和大承载能力，专为腰、臂关节设计"
+        },
+        {
+          "title": "RV减速机",
+          "desc": "体积小、精度高，专为前臂、腕关节设计。"
+        }
       ],
-      "bodyAria": "AI automation overview",
-      "lead": "Add cell layout, interfaces, delivery model, and examples here."
+      "customCases": {
+        "ariaLabel": "定制案例展示-定制组件",
+        "title": "定制案例展示-定制组件",
+        "subtitle": "30年间服务多个行业多个领域客户",
+        "imgAlt": "定制案例展示-定制组件"
+      }
     }
+  },
+  "cookies": {
+    "pageTitle": "Cookie声明",
+    "heading": "Cookie声明"
   }
 }

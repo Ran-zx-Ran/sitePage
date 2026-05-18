@@ -6,31 +6,25 @@
   <section class="hero" :aria-labelledby="headingId">
     <img class="hero__bg" :src="bgSrc" alt="" />
     <div class="hero__content">
-      <div class="title1">金属加工 来图来样加工定制</div>
+      <div class="title1">{{ t("products.common.hero.badge") }}</div>
       <h1 :id="headingId" class="title">{{ titleLine1 }}</h1>
       <p class="title title_sub">{{ titleLine2 }}</p>
       <div class="desc">
         <div v-for="(item, i) in bullets" :key="i" class="desc_item">{{ item }}</div>
       </div>
       <div class="desc2">{{ heroDesc3 }}</div>
-      <div class="desc2" :class="heroDesc3 ? 'desc3' : ''">{{ footnoteText || "最小精度：0.001 毫米" }}</div>
+      <div class="desc2" :class="heroDesc3 ? 'desc3' : ''">{{ footnoteText || t("products.common.hero.defaultFootnote") }}</div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-function isZhLocale(locale: string) {
-  return locale === "zh" || locale.startsWith("zh-");
-}
-
-const props = withDefaults(
+withDefaults(
   defineProps<{
-    /** 分类专用背景（由各产品页 import 传入） */
     bgSrc: string;
     titleLine1: string;
     titleLine2: string;
     bullets: string[];
-    /** 不传则使用 i18n 中全站统一的脚注文案 */
     footnote?: string;
     headingId?: string;
     heroDesc3?: string;
@@ -38,9 +32,8 @@ const props = withDefaults(
   }>(),
   { headingId: "product-hero-heading" },
 );
-console.log(props, 111111);
 
-const { t, locale } = useI18n();
+const { t } = useI18n();
 </script>
 
 <style scoped lang="scss">

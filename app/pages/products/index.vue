@@ -1,11 +1,15 @@
 <template>
   <div class="page-products">
-    <h1>产品</h1>
+    <h1>{{ t("products.index.heading") }}</h1>
   </div>
 </template>
 
 <script setup lang="ts">
-useHead({ title: '产品' });
+const { t } = useI18n();
+
+useHead(() => ({
+  title: t("products.index.pageTitle"),
+}));
 </script>
 
 <style scoped>

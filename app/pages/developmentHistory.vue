@@ -8,7 +8,7 @@
       </h1>
     </section>
 
-    <section class="timeline" aria-label="Development timeline">
+    <section class="timeline" :aria-label="t('developmentHistory.aria.timeline')">
       <div class="timeline-container">
         <template v-for="(item, index) in list" :key="index">
           <!-- 左右交替的行：偶数索引为左，奇数索引为右 -->
@@ -52,6 +52,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
 import img1 from "~/assets/img/development/new/1.png";
 import img2 from "~/assets/img/development/new/2.png";
 import img3 from "~/assets/img/development/new/3.png";
@@ -61,45 +62,17 @@ import img6 from "~/assets/img/development/new/6.png";
 import img7 from "~/assets/img/development/new/7.png";
 import line1 from "~/assets/img/development/9.png";
 import line2 from "~/assets/img/development/10.png";
+const { t, tm, rt } = useI18n();
 
-const list = [
-  {
-    title: "2005",
-    desc: "公司成立",
-    img: img1,
-  },
-  {
-    title: "2006",
-    desc: "我们已与弗兰德(Flender)、西门子(Siemens)、威能极(Winergy)、维斯塔斯(Vestas)等多家全球《财富》500强企业开展合作，专注于环类和套类产品的生产(例如:轴承座圈、齿轮套、联轴器套等)。",
-    img: img2,
-  },
-  {
-    title: "2017",
-    desc: "我们积极拓展新的业务领域，现已与久益全球(Joy Global)和戴纳帕克(Dynapac)建立合作伙伴关系，为其提供专业工业部件与解决方案。",
-    img: img3,
-  },
-  {
-    title: "2020",
-    desc: "我们已扩展产品线，现涵盖环类与套类、轴类产品的精密加工以及钣金制造，为工业应用提供更广泛的组件选择。",
-    img: img4,
-  },
-  {
-    title: "2022",
-    desc: "拓展至新业务领域我们已与国轩高科(GotionHigh-tech)和亿能电力(E-Power Technologies)建立合作伙伴关系，共同开发并供应新能源与电力系统组件。",
-    img: img5,
-  },
-  {
-    title: "2025",
-    desc: "我们已引进新的检测与 生产设备，并推行自动化 管理，以提升整体制造能力。",
-    img: img6,
-  },
-  {
-    title: "2026",
-    desc: "我们已新增设备、 扩建厂房并扩充团队， 以支持规模化生产与运营增长。",
-    img: img7,
-  },
-];
-const { locale, t } = useI18n();
+const timelineImages = [img1, img2, img3, img4, img5, img6, img7];
+
+const list = computed(() =>
+  (tm("developmentHistory.timeline") as Array<{ year: string; desc: string }>).map((item, index) => ({
+    title: rt(item.year),
+    desc: rt(item.desc),
+    img: timelineImages[index],
+  })),
+);
 
 usePageSeo("developmentHistory");
 </script>

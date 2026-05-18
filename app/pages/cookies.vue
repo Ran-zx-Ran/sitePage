@@ -1,11 +1,15 @@
 <template>
   <div class="page-legal">
-    <h1>Cookie声明</h1>
+    <h1>{{ t("cookies.heading") }}</h1>
   </div>
 </template>
 
 <script setup lang="ts">
-useHead({ title: 'Cookie声明' });
+const { t } = useI18n();
+
+useHead(() => ({
+  title: t("cookies.pageTitle"),
+}));
 </script>
 
 <style scoped>

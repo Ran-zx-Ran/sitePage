@@ -25,57 +25,52 @@ import caseImg4 from "~/assets/img/products/Shaft/9.png";
 import caseImg5 from "~/assets/img/products/Shaft/10.png";
 import caseImg6 from "~/assets/img/products/Shaft/11.png";
 import anli from "~/assets/img/products/Shaft/12.png";
+const { t, tm, rt } = useI18n();
+const p = "products.shaft" as const;
+
 const imgCustomCase = ref({
   src: anli,
 });
-/** 中文 Hero 文案（后续可迁入 zh.json）；英文走 en.json productPage.shaft */
-const hero = ref({
-  heroTitle1: "中大型非标轴类",
-  heroTitle2: "高级定制加工",
-  heroBullets: ["· 内螺纹与外螺纹加工", "· 台阶车削 / 阶梯车削", "· 键槽铣削", "· 其他工艺"],
-});
-const { t, tm, locale } = useI18n();
-const p = "productPage.shaft" as const;
+const hero = computed(() => ({
+  heroTitle1: t(`${p}.hero.titleLine1`),
+  heroTitle2: t(`${p}.hero.titleLine2`),
+  heroBullets: (tm(`${p}.hero.bullets`) as string[]).map((item) => rt(item)),
+}));
 
-const caseList = ref([
-  {
-    title: "发电机轴",
-    desc: "其表面极为坚硬，内芯则兼具韧性与 延展性，从而具有卓越的抗冲击和耐磨损性能。",
-    leftImg: caseImg1,
-    rightImg: caseImg2,
-  },
-  {
-    title: "中间轴",
-    desc: "其晶粒细腻、组织致密，具有高抗疲劳特性， 确保了出色的断裂韧性与稳定可靠的无故障运行性能。",
-    leftImg: caseImg3,
-    rightImg: caseImg4,
-  },
-  {
-    title: "船用轴/船舶轴",
-    desc: "它具有优异的耐腐蚀性和长使用寿命， 同时在高负荷应用场景下具备出色的承载能力。",
-    leftImg: caseImg5,
-    rightImg: caseImg6,
-  },
-]);
-const facility = ref({
+const caseImagePairs = [
+  [caseImg1, caseImg2],
+  [caseImg3, caseImg4],
+  [caseImg5, caseImg6],
+] as const;
+
+const caseList = computed(() =>
+  (tm(`${p}.cases`) as Array<{ title: string; desc: string }>).map((item, index) => ({
+    title: rt(item.title),
+    desc: rt(item.desc),
+    leftImg: caseImagePairs[index][0],
+    rightImg: caseImagePairs[index][1],
+  })),
+);
+
+const facility = computed(() => ({
   turning: {
-    title: "车削区",
-    desc: "设备先进齐全\n精度高，规格全。",
-    imgAlt: "车削区数控车床设备",
+    title: t(`${p}.facility.turning.title`),
+    desc: t(`${p}.facility.turning.desc`),
+    imgAlt: t(`${p}.facility.turning.imgAlt`),
   },
   processing: {
-    title: "加工区",
-    desc: "我们配备了全面的设备，包括加工中心、数控车床、多种型号的铣床、磨床以及线切割电火花机。",
-    imgAlt: "加工区车间与机加工设备",
+    title: t(`${p}.facility.processing.title`),
+    desc: t(`${p}.facility.processing.desc`),
+    imgAlt: t(`${p}.facility.processing.imgAlt`),
   },
-});
-const customCases = ref({
-  ariaLabel: "非标轴类产品定制案例展示",
-  title: "定制案例展示:非标轴类产品",
-  subtitle: "凭借30年的行业经验，我们已为众多领域的客户提供了专业服务。",
-  /** 单张案例展示图（12.png）的替代文本 */
-  imgAlt: "非标轴类产品定制案例展示",
-});
+}));
+
+const customCases = computed(() => ({
+  ariaLabel: t(`${p}.customCases.ariaLabel`),
+  title: t(`${p}.customCases.title`),
+  subtitle: t(`${p}.customCases.subtitle`),
+  imgAlt: t(`${p}.customCases.imgAlt`),
+}));
 </script>
 
 <style scoped lang="scss">

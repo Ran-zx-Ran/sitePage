@@ -4,11 +4,11 @@
     <section class="hero">
       <img class="hero__bg" src="~/assets/img/home/3.png" alt="" />
       <div class="hero__overlay" />
-      <h1 class="hero__title">诚信铸就品质</h1>
-      <h1 class="hero__title">创新引领未来</h1>
+      <h1 class="hero__title">{{ t("home.hero.titleLine1") }}</h1>
+      <h1 class="hero__title">{{ t("home.hero.titleLine2") }}</h1>
       <div class="line"></div>
-      <div class="sub_title">涉及机械加工与钣金焊接业务</div>
-      <div class="sub_title">与《财富》500强企业深度合作</div>
+      <div class="sub_title">{{ t("home.hero.subtitleLine1") }}</div>
+      <div class="sub_title">{{ t("home.hero.subtitleLine2") }}</div>
       <div class="img_box">
         <img src="~/assets/img/home/1.png" alt="" />
         <img src="~/assets/img/home/2.png" alt="" />
@@ -16,14 +16,14 @@
     </section>
     <!-- 内容 -->
     <section>
-      <div class="public_title">工厂视频介绍</div>
+      <div class="public_title">{{ t("home.factory.sectionTitle") }}</div>
       <div class="video_box">
-        <div class="video_item" v-for="item in videoCards" :key="item.title">
+        <div class="video_item" v-for="item in videoCards" :key="item.key">
           <img :src="item.img" alt="" />
         </div>
       </div>
       <div class="product_panel">
-        <div class="public_title">产品类型</div>
+        <div class="public_title">{{ t("home.products.sectionTitle") }}</div>
         <div class="product_box">
           <article class="product_item" v-for="(item, idx) in productCards" :key="idx">
             <div class="product_item__media">
@@ -43,7 +43,7 @@
       </div>
 
       <div class="why_panel">
-        <div class="public_title why_panel__title_main">为什么选择我们</div>
+        <div class="public_title why_panel__title_main">{{ t("home.why.sectionTitle") }}</div>
         <p class="why_panel__subtitle">
           {{ whySubtitle }}
         </p>
@@ -58,15 +58,16 @@
       </div>
       <!-- 关于我们 -->
       <section class="about_strip" aria-labelledby="about-strip-heading">
-        <h2 id="about-strip-heading" class="about_strip__title">关于我们</h2>
+        <h2 id="about-strip-heading" class="about_strip__title">{{ t("home.about.sectionTitle") }}</h2>
         <div class="about_strip__inner">
           <div class="about_strip__media">
-            <img class="about_strip__photo" src="~/assets/img/home/10.png" alt="公司厂房与环境" loading="lazy" />
+            <img class="about_strip__photo" src="~/assets/img/home/10.png" :alt="t('home.about.imageAlt')" loading="lazy" />
           </div>
           <div class="about_strip__content">
             <p class="about_strip__text">{{ aboutIntroP1 }}</p>
             <p class="about_strip__text">{{ aboutIntroP2 }}</p>
-            <NuxtLink :to="localePath('/about')" class="about_strip__cta">查看更多</NuxtLink>
+            <!-- 项目当前不存在 /about 页面，这里改为跳转到已存在的“发展历程”页面，避免点击后出现 404 报错。 -->
+            <NuxtLink :to="localePath('/developmentHistory')" class="about_strip__cta">{{ t("home.about.ctaText") }}</NuxtLink>
           </div>
         </div>
       </section>
@@ -74,15 +75,15 @@
       <section class="cert_panel" aria-labelledby="cert-panel-heading">
         <div class="cert_panel__inner">
           <div class="cert_panel__intro">
-            <h2 id="cert-panel-heading" class="cert_panel__title">认证证书</h2>
-            <p class="cert_panel__subtitle">品质认证</p>
-            <p class="cert_panel__subtitle">权威认可</p>
-            <NuxtLink :to="localePath('/contactUs')" class="cert_panel__cta">立即咨询</NuxtLink>
+            <h2 id="cert-panel-heading" class="cert_panel__title">{{ t("home.cert.sectionTitle") }}</h2>
+            <p class="cert_panel__subtitle">{{ t("home.cert.subtitlePrimary") }}</p>
+            <p class="cert_panel__subtitle">{{ t("home.cert.subtitleSecondary") }}</p>
+            <NuxtLink :to="localePath('/contactUs')" class="cert_panel__cta">{{ t("home.cert.ctaText") }}</NuxtLink>
           </div>
           <div class="cert_panel__gallery">
             <article v-for="item in certItems" :key="item.label" class="cert_card">
               <div class="cert_card__frame">
-                <img :src="item.img" :alt="item.label + ' 认证证书'" loading="lazy" width="180" height="260" />
+                <img :src="item.img" :alt="`${item.label} ${t('home.cert.certificateAltSuffix')}`" loading="lazy" width="180" height="260" />
               </div>
               <span class="cert_card__label">{{ item.label }}</span>
             </article>
@@ -94,29 +95,29 @@
         <div class="trade_panel__inner">
           <div class="trade_collage">
             <div class="trade_collage__cell trade_collage__main">
-              <img :src="tradeImg15" alt="智能仓储与国际物流" loading="lazy" />
+              <img :src="tradeImg15" :alt="t('home.trade.imageAltMain')" loading="lazy" />
             </div>
             <div class="trade_collage__cell trade_collage__top">
-              <img :src="tradeImg16" alt="出口包装与运输" loading="lazy" />
+              <img :src="tradeImg16" :alt="t('home.trade.imageAltTop')" loading="lazy" />
             </div>
             <div class="trade_collage__cell trade_collage__bottom">
-              <img :src="tradeImg17" alt="全球贸易网络" loading="lazy" />
+              <img :src="tradeImg17" :alt="t('home.trade.imageAltBottom')" loading="lazy" />
             </div>
           </div>
           <div class="trade_panel__content">
-            <h2 id="trade-heading" class="trade_panel__title">国际贸易</h2>
+            <h2 id="trade-heading" class="trade_panel__title">{{ t("home.trade.sectionTitle") }}</h2>
             <p class="trade_panel__lead">{{ tradeIntro }}</p>
             <p class="trade_panel__lead">{{ tradeIntro2 }}</p>
             <ul class="trade_panel__list">
               <li v-for="(line, i) in tradeBullets" :key="i">{{ line }}</li>
             </ul>
-            <NuxtLink :to="localePath('/contactUs')" class="trade_panel__cta">立即咨询</NuxtLink>
+            <NuxtLink :to="localePath('/contactUs')" class="trade_panel__cta">{{ t("home.trade.ctaText") }}</NuxtLink>
           </div>
         </div>
       </section>
       <!-- 非标定制一站式合作服务流程 -->
       <section class="service_flow" aria-labelledby="service-flow-heading">
-        <h2 id="service-flow-heading" class="public_title service_flow__heading">非标定制一站式合作服务流程</h2>
+        <h2 id="service-flow-heading" class="public_title service_flow__heading">{{ t("home.serviceFlow.sectionTitle") }}</h2>
 
         <div class="service_flow__zigzag">
           <div class="service_flow__grid">
@@ -181,7 +182,7 @@
           </div>
         </div>
 
-        <ol class="service_flow__stack" :aria-label="'非标定制一站式合作服务流程'">
+        <ol class="service_flow__stack" :aria-label="t('home.serviceFlow.ariaLabel')">
           <template v-for="(step, i) in serviceFlowSteps" :key="'stack-' + i">
             <li class="service_flow__stackItem">
               <article class="service_flow__step service_flow__step--stack">
@@ -200,7 +201,7 @@
 
       <!-- 标准运输流程（蛇形四行，7 列网格，移动端纵列） -->
       <section class="shipping_flow" aria-labelledby="shipping-flow-heading">
-        <h2 id="shipping-flow-heading" class="public_title shipping_flow__heading">标准运输流程</h2>
+        <h2 id="shipping-flow-heading" class="public_title shipping_flow__heading">{{ t("home.shippingFlow.sectionTitle") }}</h2>
 
         <div class="shipping_flow__zigzag">
           <div class="shipping_flow__grid">
@@ -286,7 +287,7 @@
           </div>
         </div>
 
-        <ol class="shipping_flow__stack" aria-label="标准运输流程">
+        <ol class="shipping_flow__stack" :aria-label="t('home.shippingFlow.ariaLabel')">
           <template v-for="(step, i) in shippingFlowStepsOrdered" :key="'sh-stack-' + i">
             <li class="shipping_flow__stackItem">
               <article class="shipping_flow__step shipping_flow__step--stack">
@@ -303,7 +304,7 @@
         </ol>
 
         <!-- 合作伙伴展示（两列相册网格） -->
-        <h2 id="partner-showcase-heading" class="public_title partner_showcase__heading">合作伙伴展示</h2>
+        <h2 id="partner-showcase-heading" class="public_title partner_showcase__heading">{{ t("home.partners.sectionTitle") }}</h2>
         <ul class="partner_showcase" aria-labelledby="partner-showcase-heading">
           <li v-for="(item, i) in partnerShowcasePhotos" :key="'partner-' + i" class="partner_showcase__item">
             <div class="partner_showcase__frame">
@@ -317,7 +318,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed } from "vue";
 import videoImg from "~/assets/img/home/video.png";
 import productImg1 from "~/assets/img/home/5.png";
 import productImg2 from "~/assets/img/home/6.png";
@@ -369,59 +370,29 @@ import partnerImg53 from "~/assets/img/home/53.png";
 import partnerImg54 from "~/assets/img/home/54.png";
 import partnerImg55 from "~/assets/img/home/55.png";
 
-const { locale, t } = useI18n();
+const { t, tm, rt } = useI18n();
 const localePath = useLocalePath();
 usePageSeo("home");
 
-const aboutIntroP1 =
-  "我们的能力涵盖机械加工、钣金制造与焊接工艺，并为风电能源领域提供自动化解决方案。我们严格遵循IS09001质量管理体系与ISO3834焊接质量国际标准，确保全流程的卓越品质。";
+const aboutIntroP1 = computed(() => t("home.about.introParagraph1"));
+const aboutIntroP2 = computed(() => t("home.about.introParagraph2"));
+const whySubtitle = computed(() => t("home.why.subtitle"));
+const whyCards = computed(() =>
+  (tm("home.why.cards") as Array<{ title: string; desc: string }>).map((item) => ({
+    title: rt(item.title),
+    desc: rt(item.desc),
+  })),
+);
 
-const aboutIntroP2 =
-  "秉承“质量为先，客户至上”的原则，我们已与多家《财富》500强企业建立了深度合作，包括久益全球(JoyGlobal)、弗兰德(Flender)、西门子(Siemens)、威能极(Winergy)和戴纳帕克(Dynapac)。";
+const productImages = [productImg1, productImg2, productImg3, productImg4, productImg5];
+const productCards = computed(() =>
+  (tm("home.products.cards") as Array<{ title: string; desc: string[] }>).map((item, index) => ({
+    title: rt(item.title),
+    desc: item.desc.map((line) => rt(line)),
+    img: productImages[index],
+  })),
+);
 
-const whySubtitle = "500 强长期合作 全体系国际认证 全周期无忧售后";
-
-const whyCards = ref([
-  {
-    title: "世界500强\n长期合作伙伴",
-    desc: "深耕精密机械加工领域，是西门子、弗兰德、维斯塔斯等世界500强企业的长期合格供应商，产品品质与交付能力经国际标杆客户严苛验证。",
-  },
-  {
-    title: "全体系国际\n权威认证加持",
-    desc: "已通过ISO9001质量管理、ISO3834焊接质量、ISO45001职业健康安全、ISO14001环境管理四大国际权威认证，全流程标准化管控，筑牢品质与合规双底线。",
-  },
-  {
-    title: "全周期一站式\n售后服务",
-    desc: "专业的售后技术服务团队，可快速响应客户需求，提供安装调试、现场技术指导、故障维修、维保升级等全流程服务，全程护航客户生产无忧。",
-  },
-]);
-const productCards = ref([
-  {
-    title: "非标轴类",
-    img: productImg1,
-    desc: ["内螺纹与外螺纹加工", "台阶车削 / 阶梯车削", "键槽铣削", "其他工艺"],
-  },
-  {
-    title: "CNC精密钣金喷涂",
-    img: productImg2,
-    desc: ["激光切割", "数控折弯", "定制焊接 / 非标焊接", "数控龙门加工"],
-  },
-  {
-    title: "液压阀块",
-    img: productImg3,
-    desc: ["使用寿命长", "耐用且持久", "品质有保障", "安全可靠"],
-  },
-  {
-    title: "非标法兰",
-    img: productImg4,
-    desc: ["多种规格", "精确尺寸", "优质材料", "精细工艺"],
-  },
-  {
-    title: "自动化智能元件",
-    img: productImg5,
-    desc: ["激光切割", "数控折弯", "定制焊接", "数控龙门加工"],
-  },
-]);
 const certItems = [
   { label: "ISO3834", img: certImg11 },
   { label: "ISO9001", img: certImg12 },
@@ -429,27 +400,21 @@ const certItems = [
   { label: "ISO45001", img: certImg14 },
 ];
 
-const tradeIntro = "拥有超过10年的国际贸易经验。";
-const tradeIntro2 = "我们为全球超过30个国家的客户提供服务，对国际市场需求有着深刻的理解。我们致力于将全球信赖的国际品质，同样可靠地带到您的面前。";
+const tradeIntro = computed(() => t("home.trade.lead1"));
+const tradeIntro2 = computed(() => t("home.trade.lead2"));
+const tradeBullets = computed(() => (tm("home.trade.bullets") as string[]).map((item) => rt(item)));
 
-const tradeBullets = ["包装完整安全。", "拥有独立的进出口权。", "业务覆盖全球超过30个国家。", "公司超50%销售业绩源于海外订单。"];
+const serviceFlowIcons = [flowIcon18, flowIcon19, flowIcon20, flowIcon21, flowIcon22, flowIcon23, flowIcon24, flowIcon25, flowIcon26, flowIcon27];
+const serviceFlowSteps = computed(() =>
+  (tm("home.serviceFlow.steps") as string[]).map((label, index) => ({
+    label: rt(label),
+    icon: serviceFlowIcons[index],
+  })),
+);
 
-const serviceFlowSteps = [
-  { label: "客户咨询", icon: flowIcon18 },
-  { label: "客户服务", icon: flowIcon19 },
-  { label: "拜访客户", icon: flowIcon20 },
-  { label: "解决方案", icon: flowIcon21 },
-  { label: "下订单", icon: flowIcon22 },
-  { label: "面对面沟通", icon: flowIcon23 },
-  { label: "制造（生产）", icon: flowIcon24 },
-  { label: "工厂验收测试", icon: flowIcon25 },
-  { label: "现场安装", icon: flowIcon26 },
-  { label: "售后服务", icon: flowIcon27 },
-] as const;
-
-const serviceFlowRow1 = computed(() => serviceFlowSteps.slice(0, 4));
-const serviceFlowRow2 = computed(() => [...serviceFlowSteps.slice(4, 8)].reverse());
-const serviceFlowRow3 = computed(() => serviceFlowSteps.slice(8, 10));
+const serviceFlowRow1 = computed(() => serviceFlowSteps.value.slice(0, 4));
+const serviceFlowRow2 = computed(() => [...serviceFlowSteps.value.slice(4, 8)].reverse());
+const serviceFlowRow3 = computed(() => serviceFlowSteps.value.slice(8, 10));
 
 /** 标准运输流程：配图 32.png–46.png（15 张），第 16 步暂与同序列最后一张共用，若有 47.png 可再拆分 */
 const shippingFlowImages = [
@@ -470,28 +435,9 @@ const shippingFlowImages = [
   shipImg46,
 ] as const;
 
-const shippingFlowLabels = [
-  "生产完成",
-  "最终检验及测试报告出具",
-  "客户订单跟进确认",
-  "激光打标/雕刻",
-  "去毛刺、清洁与干燥",
-  "防锈处理",
-  "内包装密封与贴标",
-  "缓冲与防护",
-  "捆扎与固定",
-  "码垛（或托盘化）",
-  "粘贴运输标识与警示标签",
-  "物流抵达港口",
-  "集装箱装货",
-  "发送清关文件",
-  "目的港清关",
-  "送货至客户工厂",
-] as const;
-
 const shippingFlowSteps = computed(() =>
-  shippingFlowLabels.map((label, i) => ({
-    label,
+  (tm("home.shippingFlow.steps") as string[]).map((label, i) => ({
+    label: rt(label),
     img: shippingFlowImages[i] ?? shippingFlowImages[shippingFlowImages.length - 1],
   })),
 );
@@ -503,40 +449,20 @@ const shippingFlowRow4 = computed(() => [...shippingFlowSteps.value.slice(12, 16
 
 const shippingFlowStepsOrdered = computed(() => [...shippingFlowSteps.value]);
 
-const partnerShowcasePhotos = [
-  { src: partnerImg47, alt: "合作伙伴展示：厂区交流与合影 1" },
-  { src: partnerImg48, alt: "合作伙伴展示：厂区交流与合影 2" },
-  { src: partnerImg49, alt: "合作伙伴展示：厂区交流与合影 3" },
-  { src: partnerImg50, alt: "合作伙伴展示：厂区交流与合影 4" },
-  { src: partnerImg51, alt: "合作伙伴展示：厂区交流与合影 5" },
-  { src: partnerImg52, alt: "合作伙伴展示：厂区交流与合影 6" },
-  { src: partnerImg53, alt: "合作伙伴展示：厂区交流与合影 7" },
-  { src: partnerImg54, alt: "合作伙伴展示：厂区交流与合影 8" },
-  { src: partnerImg55, alt: "合作伙伴展示：厂区交流与合影 9" },
-];
+const partnerImages = [partnerImg47, partnerImg48, partnerImg49, partnerImg50, partnerImg51, partnerImg52, partnerImg53, partnerImg54, partnerImg55];
+const partnerShowcasePhotos = computed(() =>
+  (tm("home.partners.photoAlts") as string[]).map((alt, index) => ({
+    src: partnerImages[index],
+    alt: rt(alt),
+  })),
+);
 
-const videoCards = ref([
-  {
-    title: "工厂视频介绍",
-    img: videoImg,
-    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    title: "工厂视频介绍3",
-    img: videoImg,
-    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    title: "工厂视频介绍4",
-    img: videoImg,
-    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    title: "工厂视频介绍5",
-    img: videoImg,
-    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-]);
+const videoCards = [
+  { key: "video-1", img: videoImg, video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
+  { key: "video-2", img: videoImg, video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
+  { key: "video-3", img: videoImg, video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
+  { key: "video-4", img: videoImg, video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
+];
 </script>
 
 <style scoped lang="scss">

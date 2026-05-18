@@ -7,7 +7,7 @@
           <p class="shaft-facility__desc shaft-facility__desc--preline pl-10">{{ facility.turning.desc }}</p>
         </div>
 
-        <div class="mark" v-if="facility.turning.title == '喷漆室'">最大5吨</div>
+        <div class="mark" v-if="facility.turning.showCapacityTag">{{ t("products.common.top.paintBoothCapacityTag") }}</div>
         <div class="shaft-facility__figure">
           <img class="shaft-facility__img" :src="imgTurning" :alt="facility.turning.imgAlt" width="1490" height="1166" decoding="async" />
         </div>
@@ -15,23 +15,22 @@
       <div class="shaft-facility__col">
         <div>
           <h2 class="shaft-facility__title pl-10">{{ facility.processing.title }}</h2>
-          <p class="shaft-facility__desc pl-10" :class="{ 'shaft-facility__desc--preline': facility.turning.title == '喷漆室' }">{{ facility.processing.desc }}</p>
+          <p class="shaft-facility__desc pl-10" :class="{ 'shaft-facility__desc--preline': facility.turning.showCapacityTag }">{{ facility.processing.desc }}</p>
         </div>
-        <div class="mark" v-if="facility.turning.title == '喷漆室'">最大5吨</div>
+        <div class="mark" v-if="facility.processing.showCapacityTag">{{ t("products.common.top.paintBoothCapacityTag") }}</div>
         <div class="shaft-facility__figure">
           <img class="shaft-facility__img" :src="imgProcessing" :alt="facility.processing.imgAlt" width="1490" height="1166" decoding="async" />
         </div>
       </div>
     </div>
     <section>
-      <!-- 案例展示 -->
       <div class="public_panel">
         <div class="public_line">
           <div class="line"></div>
           <div class="line"></div>
           <div class="line"></div>
         </div>
-        <div class="public_title">案例展示</div>
+        <div class="public_title">{{ t("products.common.top.caseSectionTitle") }}</div>
       </div>
       <div class="case_box">
         <div class="case_item" v-for="item in caseList" :key="item.title">
@@ -63,8 +62,8 @@
 import { ref } from "vue";
 import defImgTurning from "~/assets/img/products/Shaft/2.png";
 import imgProcessing from "~/assets/img/products/Shaft/3.png";
-/** 非标轴类定制案例：单张合成图（Shaft/12.png） */
 import anli from "~/assets/img/products/Shaft/12.png";
+const { t } = useI18n();
 
 const props = defineProps({
   caseList: {
@@ -87,19 +86,16 @@ const props = defineProps({
     default: () => ({}),
   },
   imgCustomCase: {
-    // 定制案例展示：单张合成图（Shaft/12.png）
     type: Object,
     default: () => ({
       src: anli,
     }),
   },
   imgTurning: {
-    // 车削区展示：Shaft/2.png
     type: String,
     default: defImgTurning,
   },
   imgProcessing: {
-    // 车削区展示：Shaft/3.png
     type: String,
     default: imgProcessing,
   },

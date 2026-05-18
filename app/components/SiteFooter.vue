@@ -2,13 +2,13 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-top">
-        <span class="footer-top-item">邮箱: sale@tjbeixiang.com</span>
-        <span class="footer-top-item">电话: +86-022-86993965</span>
-        <span class="footer-top-item">24小时响应</span>
+        <span class="footer-top-item">{{ t("layout.footer.contact.email") }}</span>
+        <span class="footer-top-item">{{ t("layout.footer.contact.phone") }}</span>
+        <span class="footer-top-item">{{ t("layout.footer.contact.service") }}</span>
       </div>
       <div class="footer-rule" role="presentation" />
-      <nav class="footer-bottom" aria-label="页脚链接">
-        <NuxtLink :to="localePath('/contactUs')" class="footer-link">公司信息</NuxtLink>
+      <nav class="footer-bottom" :aria-label="t('layout.footer.aria.links')">
+        <NuxtLink :to="localePath('/contactUs')" class="footer-link">{{ t("layout.footer.links.companyInfo") }}</NuxtLink>
         <!-- <NuxtLink :to="localePath('/privacy')" class="footer-link">隐私声明</NuxtLink>
         <NuxtLink :to="localePath('/cookies')" class="footer-link">Cookie声明</NuxtLink> -->
       </nav>
@@ -17,6 +17,7 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
 const localePath = useLocalePath();
 </script>
 

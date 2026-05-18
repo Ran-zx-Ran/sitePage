@@ -1,60 +1,53 @@
 <template>
   <div>
-    <!-- 材质无限制：公共标题区 + 描述 + 六宫格卡片（图 + 深蓝底白字名称） -->
-    <section class="shaft-material-section" aria-label="材质无限制">
+    <section class="shaft-material-section" :aria-label="t('products.common.footer.materials.sectionAria')">
       <div class="public_panel">
         <div class="public_line">
           <div class="line"></div>
           <div class="line"></div>
           <div class="line"></div>
         </div>
-        <div class="public_title">材质无限制</div>
+        <div class="public_title">{{ t("products.common.footer.materials.sectionTitle") }}</div>
       </div>
-      <div class="public_desc">我们专注于全系列金属材料的定制加工，覆盖所有材料类别。</div>
-      <!-- role="list"：多块并列材质卡片，便于读屏识别为一组 -->
+      <div class="public_desc">{{ t("products.common.footer.materials.lead") }}</div>
       <div class="shaft-material-grid" role="list">
         <article v-for="(item, materialIndex) in materialList" :key="`shaft-material-${materialIndex}`" class="shaft-material-card" role="listitem">
-          <!-- 上图：固定 1:1 裁剪区，不同原始比例统一为封面填充 -->
           <figure class="shaft-material-card__figure">
             <img class="shaft-material-card__img" :src="item.img" :alt="item.title" width="480" height="480" loading="lazy" decoding="async" />
           </figure>
-          <!-- 下条：稿面深蓝底 + 材质中文名居中 -->
           <div class="shaft-material-card__label">{{ item.title }}</div>
         </article>
       </div>
     </section>
-    <!-- 应用场景：横版配图 + 仅图上侧圆角 + 标题在图下（栅格区域 intentionally 不设背景色） -->
-    <section class="shaft-application-section" aria-label="应用场景">
+    <section class="shaft-application-section" :aria-label="t('products.common.footer.applications.sectionAria')">
       <div class="public_panel">
         <div class="public_line">
           <div class="line"></div>
           <div class="line"></div>
           <div class="line"></div>
         </div>
-        <div class="public_title">应用场景</div>
+        <div class="public_title">{{ t("products.common.footer.applications.sectionTitle") }}</div>
       </div>
-      <div class="public_desc">我们的产品广泛应用于各个行业，包括新能源、医疗、造船和工程机械领域。</div>
+      <div class="public_desc">{{ t("products.common.footer.applications.lead") }}</div>
       <div class="shaft-application-grid" role="list">
         <article v-for="(item, applicationIndex) in applicationList" :key="`shaft-application-${applicationIndex}`" class="shaft-application-card" role="listitem">
           <figure class="shaft-application-card__figure">
             <img class="shaft-application-card__img" :src="item.img" :alt="item.title" width="640" height="400" loading="lazy" decoding="async" />
           </figure>
-          <!-- 行业名称：稿面为深色正文、相对图片居中 -->
           <p class="shaft-application-card__caption">{{ item.title }}</p>
         </article>
       </div>
     </section>
-    <!-- 卓越与精准 / 严格的质量控制：质检能力九宫格（无模块背景色，正文色 #07183C） -->
-    <section class="shaft-quality-section mb-20" aria-label="卓越与精准与严格的质量控制">
+    <section class="shaft-quality-section mb-20" :aria-label="t('products.common.footer.quality.sectionAria')">
       <div class="public_panel">
         <div class="public_line">
           <div class="line"></div>
           <div class="line"></div>
           <div class="line"></div>
         </div>
-        <div class="public_title">卓越与精准&nbsp;&nbsp;&nbsp; 严格的质量控制</div>
+        <div class="public_title">{{ t("products.common.footer.quality.sectionTitle") }}</div>
       </div>
-      <div class="public_desc shaft-quality-section__lead">先进的检测设备与专业的技术人员确保产品符合GB、DIN、ANSI、BS、JIS等相关标准。</div>
+      <div class="public_desc shaft-quality-section__lead">{{ t("products.common.footer.quality.lead") }}</div>
       <div class="shaft-quality-grid" role="list">
         <article v-for="(item, qualityIndex) in qualityList" :key="`shaft-quality-${qualityIndex}`" class="shaft-quality-card" role="listitem">
           <figure class="shaft-quality-card__figure">
@@ -64,7 +57,6 @@
         </article>
       </div>
     </section>
-    <!-- 检测设备及油漆合作商 -->
     <section>
       <div class="public_panel">
         <div class="public_line">
@@ -72,15 +64,14 @@
           <div class="line"></div>
           <div class="line"></div>
         </div>
-        <div class="public_title">检测设备及油漆合作商检测设备及油漆合作商</div>
+        <div class="public_title">{{ t("products.common.footer.paintPartners.sectionTitle") }}</div>
       </div>
-      <div class="public_desc">我们所用的油漆涂料，均为国际一线品牌大厂如阿克苏诺贝尔、海虹老人、PPG大师漆、佩特、佐敦等</div>
+      <div class="public_desc">{{ t("products.common.footer.paintPartners.lead") }}</div>
       <div class="img_box mt-20 mb-20">
         <img class="left_img" src="~/assets/img/products/Shaft/34.png" alt="" />
         <img class="right_img" src="~/assets/img/products/Shaft/35.png" alt="" />
       </div>
     </section>
-    <!-- 工艺技术 -->
     <section>
       <div class="public_panel">
         <div class="public_line">
@@ -88,10 +79,10 @@
           <div class="line"></div>
           <div class="line"></div>
         </div>
-        <div class="public_title">工艺技术</div>
-        <div class="public_title2">【资深工艺技术工程师团队】</div>
-        <div class="public_title3">8小时极速报价·24小时单件快样</div>
-        <div class="public_desc2">资深工艺技术工程师团队坐镇，全程精细化设计严控工序精度， 科学控制成本，为您提供定制化最优解决方案。</div>
+        <div class="public_title">{{ t("products.common.footer.technology.sectionTitle") }}</div>
+        <div class="public_title2">{{ t("products.common.footer.technology.subTitle") }}</div>
+        <div class="public_title3">{{ t("products.common.footer.technology.highlight") }}</div>
+        <div class="public_desc2">{{ t("products.common.footer.technology.lead") }}</div>
       </div>
       <div class="gy-content">
         <img src="~/assets/img/products/Shaft/36.png" alt="" />
@@ -99,7 +90,6 @@
         <img src="~/assets/img/products/Shaft/38.png" alt="" />
       </div>
     </section>
-    <!-- 物料追踪 -->
     <section>
       <div class="public_panel">
         <div class="public_line">
@@ -107,9 +97,9 @@
           <div class="line"></div>
           <div class="line"></div>
         </div>
-        <div class="public_title">物料追踪</div>
-        <div class="public_title2">【STS智能订单物料跟踪管理系统】</div>
-        <div class="public_title3">智能化、数字化管理，每一步都有迹可循</div>
+        <div class="public_title">{{ t("products.common.footer.tracking.sectionTitle") }}</div>
+        <div class="public_title2">{{ t("products.common.footer.tracking.subTitle") }}</div>
+        <div class="public_title3">{{ t("products.common.footer.tracking.highlight") }}</div>
       </div>
       <div class="gy-content">
         <img src="~/assets/img/products/Shaft/39.png" alt="" />
@@ -121,8 +111,6 @@
 </template>
 
 <script setup lang="ts">
-
-
 import materialImg1 from "~/assets/img/products/Shaft/13.png";
 import materialImg2 from "~/assets/img/products/Shaft/14.png";
 import materialImg3 from "~/assets/img/products/Shaft/15.png";
@@ -145,111 +133,33 @@ import qualityImg6 from "~/assets/img/products/Shaft/30.png";
 import qualityImg7 from "~/assets/img/products/Shaft/31.png";
 import qualityImg8 from "~/assets/img/products/Shaft/32.png";
 import qualityImg9 from "~/assets/img/products/Shaft/33.png";
-/**
- * 「质量控制」展示区数据：设备/人员实景图 + 简要说明 title（多项文案重复为现有业务数据，列表 key 用索引）。
- */
-const qualityList = [
-  {
-    title: "专业工具",
-    img: qualityImg1,
-  },
-  {
-    title: "专业检验人员",
-    img: qualityImg2,
-  },
-  {
-    title: "大型三坐标检测仪",
-    img: qualityImg3,
-  },
-  {
-    title: "质量看板",
-    img: qualityImg4,
-  },
-  {
-    title: "超声波探伤检测",
-    img: qualityImg5,
-  },
-  {
-    title: "光谱检测",
-    img: qualityImg6,
-  },
-  {
-    title: "热处理试验台",
-    img: qualityImg7,
-  },
-  {
-    title: "表面处理检测",
-    img: qualityImg8,
-  },
-  {
-    title: "3D扫描",
-    img: qualityImg9,
-  },
-];
-/**
- * 「应用场景」栅格数据：title 为下方说明文案，img 为横版场景图（顺序对应设计稿 3×2）。
- * key 使用索引，避免未来标题文案重复时列表渲染冲突。
- */
-const applicationList = [
-  {
-    title: "太阳能与风能(领域)",
-    img: applicationImg1,
-  },
-  {
-    title: "医疗行业",
-    img: applicationImg2,
-  },
-  {
-    title: "造船行业",
-    img: applicationImg3,
-  },
-  {
-    title: "AI机器人行业",
-    img: applicationImg4,
-  },
-  {
-    title: "新能源储能行业",
-    img: applicationImg5,
-  },
-  {
-    title: "新能源汽车行业",
-    img: applicationImg6,
-  },
-];
-/**
- * 「材质无限制」栅格数据源：每项包含展示标题 title 与配图 img（顺序对应设计稿 3×2）。
- * 注意前两处「不锈钢」文案重复属业务数据，列表 key 使用索引区分。
- */
-const materialList = [
-  {
-    title: "不锈钢",
-    img: materialImg1,
-  },
-  {
-    title: "铜材",
-    img: materialImg2,
-  },
-  {
-    title: "铝合金材料",
-    img: materialImg3,
-  },
-  {
-    title: "碳钢",
-    img: materialImg4,
-  },
-  {
-    title: "不锈钢",
-    img: materialImg5,
-  },
-  {
-    title: "优特钢",
-    img: materialImg6,
-  },
-];
+const { t, tm, rt } = useI18n();
 
+// 公共产品底部模块统一从国际化资源读取文案，再与固定图片资源做映射。
+const qualityImages = [qualityImg1, qualityImg2, qualityImg3, qualityImg4, qualityImg5, qualityImg6, qualityImg7, qualityImg8, qualityImg9];
+const applicationImages = [applicationImg1, applicationImg2, applicationImg3, applicationImg4, applicationImg5, applicationImg6];
+const materialImages = [materialImg1, materialImg2, materialImg3, materialImg4, materialImg5, materialImg6];
 
+const qualityList = computed(() =>
+  (tm("products.common.footer.quality.items") as string[]).map((title, index) => ({
+    title: rt(title),
+    img: qualityImages[index],
+  })),
+);
 
+const applicationList = computed(() =>
+  (tm("products.common.footer.applications.items") as string[]).map((title, index) => ({
+    title: rt(title),
+    img: applicationImages[index],
+  })),
+);
 
+const materialList = computed(() =>
+  (tm("products.common.footer.materials.items") as string[]).map((title, index) => ({
+    title: rt(title),
+    img: materialImages[index],
+  })),
+);
 </script>
 
 <style scoped lang="scss">

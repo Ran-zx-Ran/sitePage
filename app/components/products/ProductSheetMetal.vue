@@ -25,51 +25,54 @@ import caseImg3 from "~/assets/img/products/Shaft/8.png";
 import caseImg4 from "~/assets/img/products/Shaft/9.png";
 import anli from "~/assets/img/products/Sheet/3.png";
 import defImgTurning from "~/assets/img/products/Value/2.png";
+const { t, tm, rt } = useI18n();
+const p = "products.sheetMetal" as const;
+
 const imgCustomCase = ref({
   src: anli,
 });
 
-const facility = ref({
+const facility = computed(() => ({
   turning: {
-    title: "喷漆室",
-    desc: "可喷涂最大工件 \n 6米(长)*3米(宽)*2米(高)",
-    imgAlt: "喷漆室",
+    title: t(`${p}.facility.turning.title`),
+    desc: t(`${p}.facility.turning.desc`),
+    imgAlt: t(`${p}.facility.turning.imgAlt`),
+    showCapacityTag: tm(`${p}.facility.turning.showCapacityTag`) as boolean,
   },
   processing: {
-    title: "喷漆室",
-    desc: "可喷涂最大工件 \n 6米(长)*3米(宽)*2米(高)",
-    imgAlt: "喷漆室",
+    title: t(`${p}.facility.processing.title`),
+    desc: t(`${p}.facility.processing.desc`),
+    imgAlt: t(`${p}.facility.processing.imgAlt`),
+    showCapacityTag: tm(`${p}.facility.processing.showCapacityTag`) as boolean,
   },
-});
-const caseList = ref([
-  {
-    title: "减速机护罩",
-    desc: "尺寸:1070mm*790mm*390mm",
-    leftImg: caseImg1,
-    rightImg: caseImg2,
-  },
-  {
-    title: "电机壳",
-    desc: "尺寸:直径313mm 高度297mm",
-    leftImg: caseImg3,
-    rightImg: caseImg4,
-  },
-]);
-const customCases = ref({
-  ariaLabel: "定制案例展示-钣金展示",
-  title: "定制案例展示-钣金展示",
-  subtitle: "30年间服务多个行业多个领域客户",
-  imgAlt: "定制案例展示-钣金展示",
-});
+}));
 
-const hero = ref({
-  heroTitle1: "CNC精密 ",
-  heroTitle2: "钣金喷涂",
-  heroBullets: ["· 激光切割", "· 数控折弯", "· 非标焊接", "· 数控龙门"],
-});
+const caseImagePairs = [
+  [caseImg1, caseImg2],
+  [caseImg3, caseImg4],
+] as const;
 
-const { t, tm, locale } = useI18n();
-const p = "productPage.sheetMetal" as const;
+const caseList = computed(() =>
+  (tm(`${p}.cases`) as Array<{ title: string; desc: string }>).map((item, index) => ({
+    title: rt(item.title),
+    desc: rt(item.desc),
+    leftImg: caseImagePairs[index][0],
+    rightImg: caseImagePairs[index][1],
+  })),
+);
+
+const customCases = computed(() => ({
+  ariaLabel: t(`${p}.customCases.ariaLabel`),
+  title: t(`${p}.customCases.title`),
+  subtitle: t(`${p}.customCases.subtitle`),
+  imgAlt: t(`${p}.customCases.imgAlt`),
+}));
+
+const hero = computed(() => ({
+  heroTitle1: t(`${p}.hero.titleLine1`),
+  heroTitle2: t(`${p}.hero.titleLine2`),
+  heroBullets: (tm(`${p}.hero.bullets`) as string[]).map((item) => rt(item)),
+}));
 </script>
 
 <style scoped lang="scss">
