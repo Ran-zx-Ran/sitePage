@@ -7,6 +7,19 @@ export default defineNuxtConfig({
     preset: 'static',
     prerender: {
       crawlLinks: true
+    },
+    compressPublicAssets: {
+      gzip: true,
+      brotli: true,
+      quality: 6
+    },
+    routeRules: {
+      '/**': {
+        headers: {
+          'cache-control': 'public, max-age=31536000, immutable',
+          'Vary': 'Accept-Encoding'
+        }
+      }
     }
   },
   runtimeConfig: {
@@ -18,9 +31,9 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default',
     defaultLocale: 'zh',
     langDir: 'locales',
-    lazy: false,
+    lazy: true,
     bundle: {
-      optimizeTranslationDirective: false
+      optimizeTranslationDirective: true
     },
     locales: [
       { code: 'zh', iso: 'zh-CN', file: 'zh.json', name: '中文' },
@@ -34,7 +47,11 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      meta: [{ name: 'format-detection', content: 'telephone=no' }]
+      meta: [{ name: 'format-detection', content: 'telephone=no' }],
+      link: [
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' }
+      ]
     }
   }
 })
