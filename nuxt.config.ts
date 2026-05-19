@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@nuxt/image'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
   css: ['~/assets/css/main.css'],
   nitro: {
     preset: 'static',
@@ -21,10 +21,6 @@ export default defineNuxtConfig({
         }
       }
     }
-  },
-  image: {
-    format: ['webp', 'png'],
-    quality: 80
   },
   runtimeConfig: {
     public: {
