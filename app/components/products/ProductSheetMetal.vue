@@ -4,7 +4,15 @@
 -->
 <template>
   <div class="product-category-page">
-    <ProductPageHero :bg-src="heroBg" :title-line1="hero.heroTitle1" :title-line2="hero.heroTitle2" :bullets="hero.heroBullets" />
+    <ProductPageHero
+      :bg-src="heroBg"
+      :title-line1="hero.heroTitle1"
+      :title-line2="hero.heroTitle2"
+      :bullets="hero.heroBullets"
+      :footnoteText="hero.FootnoteText"
+      :badge1="hero.badge1"
+      :badge2="hero.badge2"
+    />
     <section class="product-category-page__body" :aria-label="t(`${p}.bodyAria`)">
       <pubTop :caseList="caseList" :customCases="customCases" :facility="facility" :imgCustomCase="imgCustomCase" :imgTurning="defImgTurning"></pubTop>
       <pubFooter></pubFooter>
@@ -19,10 +27,10 @@ import pubFooter from "./pubFooter.vue";
 import pubTop from "./pubTop.vue";
 import { ref } from "vue";
 
-import caseImg1 from "~/assets/img/products/Shaft/6.png";
-import caseImg2 from "~/assets/img/products/Shaft/7.png";
-import caseImg3 from "~/assets/img/products/Shaft/8.png";
-import caseImg4 from "~/assets/img/products/Shaft/9.png";
+import caseImg1 from "~/assets/img/products/Sheet/6.png";
+import caseImg2 from "~/assets/img/products/Sheet/7.png";
+import caseImg3 from "~/assets/img/products/Sheet/8.png";
+import caseImg4 from "~/assets/img/products/Sheet/9.png";
 import anli from "~/assets/img/products/Sheet/3.png";
 import defImgTurning from "~/assets/img/products/Value/2.png";
 const { t, tm, rt } = useI18n();
@@ -72,6 +80,9 @@ const hero = computed(() => ({
   heroTitle1: t(`${p}.hero.titleLine1`),
   heroTitle2: t(`${p}.hero.titleLine2`),
   heroBullets: (tm(`${p}.hero.bullets`) as string[]).map((item) => rt(item)),
+  FootnoteText: t(`${p}.hero.footnoteText`),
+  badge1: t(`${p}.hero.badge1`),
+  badge2: t(`${p}.hero.badge2`),
 }));
 </script>
 

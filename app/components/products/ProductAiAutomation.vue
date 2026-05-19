@@ -26,10 +26,10 @@ import pubFooter from "./pubFooter.vue";
 import pubTop from "./pubTop.vue";
 import { ref } from "vue";
 
-import caseImg1 from "~/assets/img/products/Shaft/6.png";
-import caseImg2 from "~/assets/img/products/Shaft/7.png";
-import caseImg3 from "~/assets/img/products/Shaft/8.png";
-import caseImg4 from "~/assets/img/products/Shaft/9.png";
+import caseImg1 from "~/assets/img/products/ai/6.png";
+import caseImg2 from "~/assets/img/products/ai/7.png";
+import caseImg3 from "~/assets/img/products/ai/8.png";
+import caseImg4 from "~/assets/img/products/ai/9.png";
 import anli from "~/assets/img/products/ai/3.png";
 const { t, tm, rt } = useI18n();
 const p = "products.aiAutomation" as const;

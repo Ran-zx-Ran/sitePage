@@ -360,6 +360,7 @@ import shipImg43 from "~/assets/img/home/43.png";
 import shipImg44 from "~/assets/img/home/44.png";
 import shipImg45 from "~/assets/img/home/45.png";
 import shipImg46 from "~/assets/img/home/46.png";
+import shipImg47 from "~/assets/img/home/555.png";
 import partnerImg47 from "~/assets/img/home/47.png";
 import partnerImg48 from "~/assets/img/home/48.png";
 import partnerImg49 from "~/assets/img/home/49.png";
@@ -404,7 +405,7 @@ const tradeIntro = computed(() => t("home.trade.lead1"));
 const tradeIntro2 = computed(() => t("home.trade.lead2"));
 const tradeBullets = computed(() => (tm("home.trade.bullets") as string[]).map((item) => rt(item)));
 
-const serviceFlowIcons = [flowIcon18, flowIcon19, flowIcon20, flowIcon21, flowIcon22, flowIcon23, flowIcon24, flowIcon25, flowIcon26, flowIcon27];
+const serviceFlowIcons = [flowIcon18, flowIcon19, flowIcon20, flowIcon21, flowIcon25, flowIcon24, flowIcon23, flowIcon22, flowIcon26, flowIcon27];
 const serviceFlowSteps = computed(() =>
   (tm("home.serviceFlow.steps") as string[]).map((label, index) => ({
     label: rt(label),
@@ -422,17 +423,18 @@ const shippingFlowImages = [
   shipImg33,
   shipImg34,
   shipImg35,
-  shipImg36,
-  shipImg37,
-  shipImg38,
   shipImg39,
+  shipImg38,
+  shipImg37,
+  shipImg36,
   shipImg40,
   shipImg41,
+  shipImg47,
   shipImg42,
-  shipImg43,
-  shipImg44,
-  shipImg45,
   shipImg46,
+  shipImg45,
+  shipImg44,
+  shipImg43,
 ] as const;
 
 const shippingFlowSteps = computed(() =>

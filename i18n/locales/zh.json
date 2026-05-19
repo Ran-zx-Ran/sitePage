@@ -430,7 +430,10 @@
       "hero": {
         "titleLine1": "CNC精密",
         "titleLine2": "钣金喷涂",
-        "bullets": ["· 激光切割", "· 数控折弯", "· 非标焊接", "· 数控龙门"]
+        "bullets": ["· 激光切割", "· 数控折弯", "· 非标焊接", "· 数控龙门"],
+        "footnoteText": "满足盐雾试验3000小时模拟测试",
+        "badge1": "防腐等级:C5；",
+        "badge2": "最大加工尺寸:6M*3M*2M"
       },
       "facility": {
         "turning": {

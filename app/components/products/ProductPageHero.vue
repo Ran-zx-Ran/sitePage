@@ -14,6 +14,10 @@
       </div>
       <div class="desc2">{{ heroDesc3 }}</div>
       <div class="desc2" :class="heroDesc3 ? 'desc3' : ''">{{ footnoteText || t("products.common.hero.defaultFootnote") }}</div>
+      <div class="desc4" v-if="badge1">
+        <div>{{ badge1 }}</div>
+        <div>{{ badge2 }}</div>
+      </div>
     </div>
   </section>
 </template>
@@ -29,6 +33,8 @@ withDefaults(
     headingId?: string;
     heroDesc3?: string;
     footnoteText?: string;
+    badge1?: string;
+    badge2?: string;
   }>(),
   { headingId: "product-hero-heading" },
 );
@@ -37,6 +43,14 @@ const { t } = useI18n();
 </script>
 
 <style scoped lang="scss">
+.desc4 {
+  background-color: #00cccc;
+  color: #fff;
+  width: 280px;
+  padding: 4px 0;
+ padding-left: 20px;
+ margin-top: 4px;
+}
 .hero__content {
   padding-left: 120px;
   position: relative;
@@ -59,16 +73,16 @@ const { t } = useI18n();
     margin: 0;
   }
   .desc3 {
-    margin-top: -30px;
+    // margin-top: -30px;
   }
   .desc2 {
     font-weight: 500;
-    font-size: 26px;
+    font-size: 24px;
     color: #e3d537;
-    line-height: 76px;
     background: linear-gradient(180deg, #fff6cd 0%, #c08e16 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    max-width: 800px;
   }
   .title {
     margin: 0;
@@ -85,7 +99,7 @@ const { t } = useI18n();
     color: #6be7d6;
     width: fit-content;
     padding: 6px 40px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 .hero {

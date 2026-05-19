@@ -15,7 +15,9 @@
       <div class="shaft-facility__col">
         <div>
           <h2 class="shaft-facility__title pl-10">{{ facility.processing.title }}</h2>
-          <p class="shaft-facility__desc pl-10" :class="{ 'shaft-facility__desc--preline': facility.turning.showCapacityTag }">{{ facility.processing.desc }}</p>
+          <p class="shaft-facility__desc pl-10" :class="{ 'shaft-facility__desc--preline': facility.turning.showCapacityTag }">
+            {{ facility.processing.desc }}
+          </p>
         </div>
         <div class="mark" v-if="facility.processing.showCapacityTag">{{ t("products.common.top.paintBoothCapacityTag") }}</div>
         <div class="shaft-facility__figure">
@@ -35,8 +37,8 @@
       <div class="case_box">
         <div class="case_item" v-for="item in caseList" :key="item.title">
           <img class="bg" src="~/assets/img/products/Shaft/biankuang.png" alt="" />
-          <div class="case_title">{{ item.title }}</div>
-          <div class="case_desc">{{ item.desc }}</div>
+          <div class="case_title" :class="item.title == 'Fast-Acting Hydraulic Valve' ? 'mintitle' : ''">{{ item.title }}</div>
+          <div class="case_desc" >{{ item.desc }}</div>
           <div class="img_box">
             <img class="left_img" :src="item.leftImg" alt="" />
             <img class="center_img" src="~/assets/img/products/Shaft/5.png" alt="" />
@@ -206,17 +208,19 @@ $shaft-case-inner: #f0f0f0;
   justify-self: center;
   width: min(88%, 26rem);
   margin-top: clamp(0.35rem, 1.2vw, 0.65rem);
-  padding: 0.55rem 1.25rem 0.65rem;
+  padding: 0.85rem 1.25rem 0.65rem;
   box-sizing: border-box;
   text-align: center;
   font-size: 32px;
   font-weight: 700;
   line-height: 1.35;
   color: #fff;
-  background: $shaft-case-cyan;
   /* 顶宽底窄的梯形 */
   clip-path: polygon(0 0, 100% 0, 92% 100%, 8% 100%);
   text-shadow: 0 1px 0 rgba(0, 20, 40, 0.25);
+  &.mintitle{
+    font-size: 26px;
+  }
 }
 
 /* 中部：左轴照片 / 中箭头 / 右装配效果图，水平均分对齐 */
@@ -257,14 +261,12 @@ $shaft-case-inner: #f0f0f0;
   grid-row: 3;
   z-index: 1;
   justify-self: center;
-  width: min(92%, 28rem);
-
-  padding: 0.25rem clamp(1rem, 3vw, 1.5rem) 0.75rem;
+  width: min(92%, 34rem);
+  padding: 0.25rem clamp(0.5rem, 3vw, 0.5rem) 0.75rem;
   box-sizing: border-box;
   text-align: center;
   font-size: 17px;
   font-weight: 500;
-  line-height: 1.65;
   color: #fff;
 }
 
