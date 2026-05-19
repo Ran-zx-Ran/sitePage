@@ -8,11 +8,16 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true
     },
-    compressPublicAssets: true,
+    compressPublicAssets: {
+      gzip: true,
+      brotli: true,
+      quality: 6
+    },
     routeRules: {
       '/**': {
         headers: {
-          'cache-control': 'public, max-age=31536000, immutable'
+          'cache-control': 'public, max-age=31536000, immutable',
+          'Vary': 'Accept-Encoding'
         }
       }
     }
