@@ -23,12 +23,13 @@ import caseImg2 from "~/assets/img/products/Value/7.png";
 import caseImg3 from "~/assets/img/products/Value/8.png";
 import caseImg4 from "~/assets/img/products/Value/9.png";
 import anli from "~/assets/img/products/Value/3.png";
+import anli2 from "~/assets/img/products/Value/33.png";
 import defImgTurning from "~/assets/img/products/Value/2.png";
-const { t, tm, rt } = useI18n();
+const { t, tm, rt,locale  } = useI18n();
 const p = "products.valve" as const;
-
+console.log("当前语言环境:", locale.value);
 const imgCustomCase = ref({
-  src: anli,
+  src:locale.value == 'en' ? anli : anli2,
 });
 
 const facility = computed(() => ({

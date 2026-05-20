@@ -8,7 +8,8 @@
       </div>
       <div class="footer-rule" role="presentation" />
       <nav class="footer-bottom" :aria-label="t('layout.footer.aria.links')">
-        <NuxtLink :to="localePath('/contactUs')" class="footer-link">{{ t("layout.footer.links.companyInfo") }}</NuxtLink>
+        <!-- <NuxtLink :to="localePath('/contactUs')" class="footer-link">{{ t("layout.footer.links.companyInfo") }}</NuxtLink> -->
+        <NuxtLink class="footer-link">{{ t("cookies.mianze") }}</NuxtLink>
         <!-- <NuxtLink :to="localePath('/privacy')" class="footer-link">隐私声明</NuxtLink>
         <NuxtLink :to="localePath('/cookies')" class="footer-link">Cookie声明</NuxtLink> -->
       </nav>
@@ -72,10 +73,10 @@ const localePath = useLocalePath();
 
 .footer-link {
   color: #fff;
-  text-decoration: none;
-  border-bottom: 1px solid #fff;
-  padding-bottom: 0.15em;
+  padding-bottom: 8px;
   transition: opacity 0.15s ease;
+  font-size: 12px;
+  margin-top: -14px;
 }
 
 .footer-link:hover {

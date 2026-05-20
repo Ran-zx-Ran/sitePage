@@ -37,8 +37,28 @@
       <div class="case_box">
         <div class="case_item" v-for="item in caseList" :key="item.title">
           <img class="bg" src="~/assets/img/products/Shaft/biankuang.png" alt="" />
-          <div class="case_title" :class="item.title == 'Fast-Acting Hydraulic Valve' ? 'mintitle' : ''">{{ item.title }}</div>
-          <div class="case_desc" >{{ item.desc }}</div>
+          <div
+            class="case_title"
+            :class="{
+              mintitle: item.title == 'Fast-Acting Hydraulic Valve',
+              mintitle2: item.title == 'GENERATOR SHAFT',
+              mintitle3: item.title == 'INTERMEDIATE SHAFT',
+            }"
+          >
+            {{ item.title }}
+          </div>
+          <div
+            class="case_desc"
+            :class="{
+              minDesc:
+                item.desc.includes('fixtures') ||
+                item.desc.includes('providingexcellent') ||
+                item.desc.includes('failure-free') ||
+                item.desc.includes('demandingapplications'),
+            }"
+          >
+            {{ item.desc }}
+          </div>
           <div class="img_box">
             <img class="left_img" :src="item.leftImg" alt="" />
             <img class="center_img" src="~/assets/img/products/Shaft/5.png" alt="" />
@@ -63,7 +83,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import defImgTurning from "~/assets/img/products/Shaft/2.png";
-import imgProcessing from "~/assets/img/products/Shaft/3.png";
+import imgProcessing2 from "~/assets/img/products/Shaft/3.png";
 import anli from "~/assets/img/products/Shaft/12.png";
 const { t } = useI18n();
 
@@ -99,7 +119,7 @@ const props = defineProps({
   },
   imgProcessing: {
     type: String,
-    default: imgProcessing,
+    default: imgProcessing2,
   },
 });
 </script>
@@ -211,15 +231,20 @@ $shaft-case-inner: #f0f0f0;
   padding: 0.85rem 1.25rem 0.65rem;
   box-sizing: border-box;
   text-align: center;
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 700;
-  line-height: 1.35;
   color: #fff;
   /* 顶宽底窄的梯形 */
   clip-path: polygon(0 0, 100% 0, 92% 100%, 8% 100%);
   text-shadow: 0 1px 0 rgba(0, 20, 40, 0.25);
-  &.mintitle{
+  &.mintitle {
     font-size: 26px;
+  }
+  &.mintitle2 {
+    font-size: 35px;
+  }
+  &.mintitle3 {
+    font-size: 32px;
   }
 }
 
@@ -262,12 +287,16 @@ $shaft-case-inner: #f0f0f0;
   z-index: 1;
   justify-self: center;
   width: min(92%, 34rem);
-  padding: 0.25rem clamp(0.5rem, 3vw, 0.5rem) 0.75rem;
+  padding: 0.1rem clamp(0.5rem, 3vw, 0.5rem) 0.75rem;
   box-sizing: border-box;
   text-align: center;
-  font-size: 17px;
+  font-size: 22px;
   font-weight: 500;
   color: #fff;
+  transform: translateY(-18px);
+  &.minDesc {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -342,8 +371,8 @@ $shaft-custom-frame: #00044a;
   width: 88%;
   height: auto;
   object-fit: contain;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  box-sizing: border-box;
+  // border: 1px solid rgba(255, 255, 255, 0.28);
+  // box-sizing: border-box;
   border-radius: 12px;
 }
 </style>

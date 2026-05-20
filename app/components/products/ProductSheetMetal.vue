@@ -14,7 +14,14 @@
       :badge2="hero.badge2"
     />
     <section class="product-category-page__body" :aria-label="t(`${p}.bodyAria`)">
-      <pubTop :caseList="caseList" :customCases="customCases" :facility="facility" :imgCustomCase="imgCustomCase" :imgTurning="defImgTurning"></pubTop>
+      <pubTop
+        :caseList="caseList"
+        :customCases="customCases"
+        :facility="facility"
+        :imgProcessing="imgProcessing"
+        :imgCustomCase="imgCustomCase"
+        :imgTurning="defImgTurning"
+      ></pubTop>
       <pubFooter></pubFooter>
     </section>
   </div>
@@ -32,7 +39,8 @@ import caseImg2 from "~/assets/img/products/Sheet/7.png";
 import caseImg3 from "~/assets/img/products/Sheet/8.png";
 import caseImg4 from "~/assets/img/products/Sheet/9.png";
 import anli from "~/assets/img/products/Sheet/3.png";
-import defImgTurning from "~/assets/img/products/Value/2.png";
+import defImgTurning from "~/assets/img/products/Sheet/4.png";
+import imgProcessing from "~/assets/img/products/Sheet/5.png";
 const { t, tm, rt } = useI18n();
 const p = "products.sheetMetal" as const;
 
