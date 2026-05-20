@@ -113,7 +113,7 @@ const { t } = useI18n();
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 93%;
+  height: 100%;
   object-fit: cover;
 }
 
