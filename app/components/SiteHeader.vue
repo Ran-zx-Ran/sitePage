@@ -1,7 +1,7 @@
 <template>
   <div class="nav flex items-center">
     <div class="nav-content flex items-center justify-between">
-      <img class="logo" src="@/assets/img/logo.png" alt="" />
+      <img class="logo" src="@/assets/img/logo.png" alt="北翔机械" />
       <nav class="flex items-center gap-8" :aria-label="t('layout.header.aria.mainNav')">
         <NuxtLink :to="localePath('/')" class="nav-link" :class="{ 'nav-link--active': isExact('/') }">
           {{ t("layout.header.nav.home") }}

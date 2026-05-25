@@ -68,8 +68,8 @@
       </div>
       <div class="public_desc">{{ t("products.common.footer.paintPartners.lead") }}</div>
       <div class="img_box mt-20 mb-20">
-        <img class="left_img" src="~/assets/img/products/Shaft/34.png" alt="" />
-        <img class="right_img" src="~/assets/img/products/Shaft/35.png" alt="" />
+        <img class="left_img" src="~/assets/img/products/Shaft/34.png" alt="油漆合作商检测设备展示" />
+        <img class="right_img" src="~/assets/img/products/Shaft/35.png" alt="油漆合作商品牌展示" />
       </div>
     </section>
     <section>
@@ -85,9 +85,9 @@
         <div class="public_desc2">{{ t("products.common.footer.technology.lead") }}</div>
       </div>
       <div class="gy-content">
-        <img src="~/assets/img/products/Shaft/36.png" alt="" />
-        <img src="~/assets/img/products/Shaft/37.png" alt="" />
-        <img src="~/assets/img/products/Shaft/38.png" alt="" />
+        <img src="~/assets/img/products/Shaft/36.png" alt="工艺技术流程展示1" />
+        <img src="~/assets/img/products/Shaft/37.png" alt="工艺技术流程展示2" />
+        <img src="~/assets/img/products/Shaft/38.png" alt="工艺技术流程展示3" />
       </div>
     </section>
     <section>
@@ -102,9 +102,9 @@
         <div class="public_title3">{{ t("products.common.footer.tracking.highlight") }}</div>
       </div>
       <div class="gy-content">
-        <img src="~/assets/img/products/Shaft/39.png" alt="" />
-        <img src="~/assets/img/products/Shaft/40.png" alt="" />
-        <img src="~/assets/img/products/Shaft/41.png" alt="" />
+        <img src="~/assets/img/products/Shaft/39.png" alt="STS智能订单物料跟踪系统展示1" />
+        <img src="~/assets/img/products/Shaft/40.png" alt="STS智能订单物料跟踪系统展示2" />
+        <img src="~/assets/img/products/Shaft/41.png" alt="STS智能订单物料跟踪系统展示3" />
       </div>
     </section>
   </div>

@@ -6,10 +6,7 @@
 
 <script setup lang="ts">
 const { t } = useI18n();
-
-useHead(() => ({
-  title: t("cookies.pageTitle"),
-}));
+usePageSeo("cookies");
 </script>
 
 <style scoped>

@@ -24,7 +24,9 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://example.com'
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.tjbeixiang.com',
+      baiduVerificationCode: process.env.NUXT_PUBLIC_BAIDU_VERIFICATION || '',
+      baiduAnalyticsId: process.env.NUXT_PUBLIC_BAIDU_ANALYTICS_ID || ''
     }
   },
   i18n: {

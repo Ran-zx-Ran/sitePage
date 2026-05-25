@@ -5,40 +5,54 @@
   },
   "seo": {
     "home": {
-      "title": "首页 — 天津市北翔机械有限公司",
-      "description": "诚信铸就品质 创新引领未来"
+      "title": "Tianjin Beixiang Machinery | Precision Non-Standard Parts Machining | 30-Year Manufacturer",
+      "description": "Tianjin Beixiang Machinery Co., Ltd. (Beixiang Machinery), a 30-year specialist in precision non-standard mechanical parts machining. We produce shafts, flanges, sheet metal parts, stainless steel components and more. ISO9001/ISO3834 certified, serving Siemens, Vestas and other Fortune 500 companies with one-stop custom machining solutions.",
+      "keywords": "Beixiang Machinery, Tianjin Beixiang Machinery, non-standard parts customization, precision shaft machining, flange machining, sheet metal fabrication, stainless steel machining, ship parts machining, non-ferrous metal machining, wind power parts, medical sheet metal, custom machining, precision machining, CNC machining, one-stop machining, Tianjin machining, ISO9001 machining, Siemens supplier, Vestas supplier, 30-year manufacturer, heavy-duty parts machining"
     },
     "developmentHistory": {
-      "title": "发展历程 — 天津市北翔机械有限公司",
-      "description": "企业发展历程：从成立到全球化合作与智能化制造的里程碑。"
+      "title": "Development History | 30-Year Manufacturer | Tianjin Beixiang Machinery",
+      "description": "The development journey of Beixiang Machinery since 2005: from partnering with Fortune 500 companies like Siemens and Flender to achieving intelligent manufacturing transformation, demonstrating 30 years of precision machining expertise.",
+      "keywords": "Beixiang Machinery, development history, Tianjin machining, precision manufacturing, 30-year manufacturer"
     },
     "contactUs": {
-      "title": "联系我们 — 天津市北翔机械有限公司",
-      "description": "联系方式与业务咨询。"
+      "title": "Contact Us | Tianjin Beixiang Machinery | Precision Machining",
+      "description": "Contact Tianjin Beixiang Machinery Co., Ltd., located in Beichen Science Park, Tianjin, China. Specializing in non-standard parts customization, precision shaft machining, and flange customization. Tel: +86-022-86993965.",
+      "keywords": "contact Beixiang Machinery, Tianjin machining manufacturer, non-standard parts, precision machining, contact"
     },
     "industryApplication": {
-      "title": "行业应用 — 天津市北翔机械有限公司",
-      "description": "精密制造在各行业的应用场景与解决方案。"
+      "title": "Industry Applications | Wind Power/Medical/Shipbuilding/AI Automation - Beixiang Machinery",
+      "description": "Beixiang Machinery's precision non-standard parts are widely used in new energy wind power, medical healthcare, shipbuilding, AI automation and other industries. We provide custom shaft, flange, and sheet metal machining services to meet diverse industry needs.",
+      "keywords": "wind power parts machining, medical sheet metal, ship parts machining, non-ferrous metal machining, AI automation parts, precision machining, custom machining, Beixiang Machinery"
     },
     "productsShaft": {
-      "title": "轴类产品 — 天津市北翔机械有限公司",
-      "description": "精密轴类零部件：传动轴、阶梯轴及定制化轴件加工与交付。"
+      "title": "Precision Shaft Machining | Custom Shafts | Drive Shaft/Stepped Shaft Manufacturer - Beixiang Machinery",
+      "description": "Beixiang Machinery provides medium-to-large custom shaft precision machining, covering drive shafts, generator shafts, intermediate shafts, marine shafts and more. We offer internal/external threading, stepped turning, keyway milling and other processes. 30 years of experience.",
+      "keywords": "precision shaft machining, custom shaft, drive shaft machining, generator shaft, marine shaft, stepped turning, keyway milling, Beixiang Machinery, CNC machining"
     },
     "productsFlange": {
-      "title": "法兰类产品 — 天津市北翔机械有限公司",
-      "description": "标准及非标法兰：多规格密封连接件与批量机加工能力。"
+      "title": "Flange Custom Machining | Non-Standard Flanges | Marine/Wind Power Flanges - Beixiang Machinery",
+      "description": "Beixiang Machinery provides custom non-standard flange machining covering marine flanges, wind tower flanges and more. Max machining diameter 1.5 m. ISO9001 certified with 30 years of machining experience. Custom manufacturing from drawings or samples.",
+      "keywords": "flange custom machining, non-standard flange, marine flange, wind power flange, flange manufacturer, precision machining, Beixiang Machinery, heavy-duty machining"
     },
     "productsValve": {
-      "title": "阀组类产品 — 天津市北翔机械有限公司",
-      "description": "液压与流体阀组模块：集成化阀块与精密加工装配。"
+      "title": "Hydraulic Manifold Custom Machining | Valve Block Products - Beixiang Machinery",
+      "description": "Beixiang Machinery provides custom hydraulic manifolds, valve blocks, and pneumatic valve block precision machining. Long service life and durability. Widely used in wind power, metallurgy, construction machinery, and automation equipment.",
+      "keywords": "hydraulic manifold, valve block machining, custom machining, CNC machining, precision machining, Beixiang Machinery"
     },
     "productsSheetMetal": {
-      "title": "喷漆钣金零件 — 天津市北翔机械有限公司",
-      "description": "钣金成型、焊接与表面喷涂：一站式金属外观件制造。"
+      "title": "Sheet Metal Fabrication | CNC Precision Sheet Metal & Coating | Custom Welding/Laser Cutting - Beixiang Machinery",
+      "description": "Beixiang Machinery provides CNC precision sheet metal fabrication and coating services: laser cutting, CNC bending, custom welding, CNC gantry machining. Max dimensions 6m×3m×2m, C5 corrosion class, 3000-hour salt spray tested. Serving Siemens, Vestas and more.",
+      "keywords": "sheet metal fabrication, CNC sheet metal coating, laser cutting, CNC bending, custom welding, sheet metal manufacturer, Beixiang Machinery, ISO3834 welding"
     },
     "productsAiAutomation": {
-      "title": "AI自动化产品 — 天津市北翔机械有限公司",
-      "description": "智能制造与自动化产线相关产品与方案。"
+      "title": "AI Automation Parts Machining | Smart Manufacturing Components - Beixiang Machinery",
+      "description": "Beixiang Machinery provides high-precision custom components for humanoid robotics and smart manufacturing, covering joint transmission and structural support parts. 30 years of precision machining experience, ISO9001 certified.",
+      "keywords": "AI automation parts, smart manufacturing, automation components, precision machining, custom machining, Beixiang Machinery, humanoid robot parts"
+    },
+    "cookies": {
+      "title": "Cookie Notice — Tianjin Beixiang Machinery",
+      "description": "Cookie notice and website disclaimer for Tianjin Beixiang Machinery's official website.",
+      "keywords": "Beixiang Machinery, cookie notice, disclaimer"
     }
   },
   "layout": {

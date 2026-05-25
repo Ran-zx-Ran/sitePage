@@ -60,9 +60,9 @@
             {{ item.desc }}
           </div>
           <div class="img_box">
-            <img class="left_img" :src="item.leftImg" alt="" />
+            <img class="left_img" :src="item.leftImg" :alt="item.title" />
             <img class="center_img" src="~/assets/img/products/Shaft/5.png" alt="" />
-            <img class="right_img" :src="item.rightImg" alt="" />
+            <img class="right_img" :src="item.rightImg" :alt="item.title" />
           </div>
         </div>
       </div>

@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+User-agent: Baiduspider
+Allow: /
+
+Sitemap: https://www.tjbeixiang.com/sitemap.xml

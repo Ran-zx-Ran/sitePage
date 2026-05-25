@@ -47,7 +47,7 @@
               :key="i"
               class="industry-card__figure"
             >
-              <img :src="img" alt="" loading="lazy" />
+              <img :src="img" :alt="item.title + '应用展示'" loading="lazy" />
             </figure>
           </div>
         </article>
