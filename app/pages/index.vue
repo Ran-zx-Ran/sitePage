@@ -16,16 +16,10 @@
     </section>
     <!-- 内容 -->
     <section>
-      <div class="public_title">{{ t("home.factory.sectionTitle") }}</div>
-      <div class="video_box">
-        <div class="video_item" v-for="item in videoCards" :key="item.key">
-          <img :src="item.img" alt="" />
-        </div>
-      </div>
       <div class="product_panel">
         <div class="public_title">{{ t("home.products.sectionTitle") }}</div>
         <div class="product_box">
-          <article class="product_item" v-for="(item, idx) in productCards" :key="idx">
+          <article class="product_item" v-for="(item, idx) in productCards" :key="idx" @click="handleJump(item)">
             <div class="product_item__media">
               <img class="product_item__img" :src="item.img" :alt="item.title" />
             </div>
@@ -302,7 +296,13 @@
             </li>
           </template>
         </ol>
-
+        <!-- 视频 -->
+        <!-- <div class="public_title mt-20">{{ t("home.factory.sectionTitle") }}</div>
+        <div class="video_box">
+          <div class="video_item" v-for="item in videoCards" :key="item.key">
+            <img :src="item.img" alt="" />
+          </div>
+        </div> -->
         <!-- 合作伙伴展示（两列相册网格） -->
         <h2 id="partner-showcase-heading" class="public_title partner_showcase__heading">{{ t("home.partners.sectionTitle") }}</h2>
         <ul class="partner_showcase" aria-labelledby="partner-showcase-heading">
@@ -386,13 +386,18 @@ const whyCards = computed(() =>
 );
 
 const productImages = [productImg1, productImg2, productImg3, productImg4, productImg5];
+const productPaths = ["/products/shaft", "/products/sheet-metal", "/products/valve", "/products/flange", "/products/ai-automation"];
 const productCards = computed(() =>
   (tm("home.products.cards") as Array<{ title: string; desc: string[] }>).map((item, index) => ({
     title: rt(item.title),
     desc: item.desc.map((line) => rt(line)),
     img: productImages[index],
+    path: productPaths[index],
   })),
 );
+const handleJump = (item: { path: string }) => {
+  navigateTo(item.path);
+};
 
 const certItems = [
   { label: "ISO3834", img: certImg11 },
@@ -588,7 +593,7 @@ const videoCards = [
   padding: 0 clamp(20px, 4vw, 52px) 100px;
 
   .public_title {
-    padding-top: 72px;
+    // padding-top: 72px;
   }
 }
 
